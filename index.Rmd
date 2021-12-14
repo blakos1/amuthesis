@@ -1,11 +1,11 @@
 ---
-title: "Mój tytuł"
-titleeng: "My title"
+title: "Zmiany pokrycia terenu dla obszaru Polski: 1990-2018"
+titleeng: "Analysis of land cover changes in Poland between 1990 and 2018"
 degreetype: "Praca inżynierska"
-author: "Imię Nazwisko"
+author: "Błażej Kościański"
 major: "Geoinformacja"
-albumid: "000000"
-year: "2020"
+albumid: "444861"
+year: "2021"
 output: bookdown::pdf_book
 site: bookdown::bookdown_site
 link-citations: yes
