@@ -11,15 +11,88 @@ Dodanie podpisu pod rycinę odbywa się używając parametru `fig.cap`.
 Następnie do tej ryciny można się odnieść używając operatora `\@ref()` wraz z prefiksem `fig:`.
 Przykładowo, odniesienie się do pierwszej ryciny wymaga wpisania `\@ref(fig:rycina1)` (Rycina \@ref(fig:rycina1)).
 
-```{r rycina1, echo=FALSE, fig.cap="Moja pierwsza rycina"}
+```{r rycina0, echo=FALSE, fig.cap="Moja pierwsza rycina"}
 plot(1, 4)
 ```
 
 Podobnie wygląda odnoszenie się do plików graficznych. 
 Tutaj wewnątrz bloku kodu należy użyć funkcji `knitr::include_graphics()` (Rycina \@ref(fig:rycina2)).
 
-```{r rycina2, echo=FALSE, fig.cap="Moja druga rycina", out.width=400}
-knitr::include_graphics("figures/rcookies.png")
+```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 po reklasyfikacji", out.width=400}
+knitr::include_graphics("figures/clc90.png")
+```
+```{r rycina2, echo=FALSE, fig.cap="Corine Land Cover 2018 po reklasyfikacji", out.width=400}
+knitr::include_graphics("figures/clc18.png")
+```
+
+
+```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji", out.width=400}
+knitr::include_graphics("figures/lc_bin.png")
+```
+
+
+```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 1990", out.width=400}
+knitr::include_graphics("figures/lcpch90.png")
+```
+```{r rycina5, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 2018", out.width=400}
+knitr::include_graphics("figures/lcpch18.png")
+```
+
+
+```{r rycina6, echo=FALSE, fig.cap="Procentowy udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
+knitr::include_graphics("figures/stacked.png")
+```
+
+
+```{r rycina7, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
+knitr::include_graphics("figures/treemap_main.png")
+```
+```{r rycina8, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
+knitr::include_graphics("figures/treemap_faceted.png")
+```
+
+
+```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
+knitr::include_graphics("figures/map_grid.png")
+```
+```{r rycina10, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla powiatów", out.width=400}
+knitr::include_graphics("figures/map_dist.png")
+```
+```{r rycina11, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla mezoregionów", out.width=400}
+knitr::include_graphics("figures/map_meso.png")
+```
+
+
+```{r rycina12, echo=FALSE, fig.cap="Obszar z największymi zmianami w siatce 10x10km", out.width=400}
+knitr::include_graphics("figures/top1_grid.png")
+```
+```{r rycina13, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród powiatów", out.width=400}
+knitr::include_graphics("figures/top1_dist.png")
+```
+```{r rycina14, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród mezoregionów", out.width=400}
+knitr::include_graphics("figures/top1_meso.png")
+```
+
+
+```{r rycina15, echo=FALSE, fig.cap="6 obszarów z największymi zmianami w siatce 10x10km", out.width=400}
+knitr::include_graphics("figures/top6_grid.png")
+```
+```{r rycina16, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród powiatów", out.width=400}
+knitr::include_graphics("figures/top6_dist.png")
+```
+```{r rycina17, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród mezoregionów", out.width=400}
+knitr::include_graphics("figures/top6_meso.png")
+```
+
+
+```{r rycina18, echo=FALSE, fig.cap="Histogram dla siatki 10x10km", out.width=400}
+knitr::include_graphics("figures/hist_grid.png")
+```
+```{r rycina19, echo=FALSE, fig.cap="Histogram dla powiatów", out.width=400}
+knitr::include_graphics("figures/hist_dist.png")
+```
+```{r rycina20, echo=FALSE, fig.cap="Histogram dla mezoregionów", out.width=400}
+knitr::include_graphics("figures/hist_meso.png")
 ```
 
 Odnoszenie się do tabel odbywa się poprzez operator `\@ref()` wraz z prefiksem `tab:`.
