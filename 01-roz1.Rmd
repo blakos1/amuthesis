@@ -1,9 +1,19 @@
 # Wprowadzenie {#wprowadzenie}
-
+<!--
 Wprowadzenie powinno mieć charakter opisu od ogółu do szczegółu (np. trzy-pięć paragrafów).
 Pierwszy paragraf powinien być najbardziej ogólny, a kolejne powinny przybliżać czytelnika do problemu.
-Przedostatni paragraf powinien określić jaki jest problem (są problemy), który praca ma rozwiązać i dlaczego jest to (są one) ważne.
+-->
 
+
+<!--
+Przedostatni paragraf powinien określić jaki jest problem (są problemy), który praca ma rozwiązać i dlaczego jest to (są one) ważne.
+-->
+
+
+<!--
 Wprowadzenie powinno być zakończone stwierdzeniem celu pracy.
 Dodatkowo tutaj może być również krótki opis co zostało zrealizowane w pracy.
+-->
 
+Głównym celem tej pracy jest analiza głównych prawidłowości dotyczących zmian struktury przestrzennej pokrycia terenu dla obszaru Polski.
+Dodatkowym celem było stworzenie mapy trendów zmian zaszłych w przeciągu 18 lat dynamicznego rozwoju oraz ulepszenie istniejącego oprogramowania do analiz lokalnych krajobrazów (no czy to ulepszenie mi się udało to do końca nie jestem pewien lol)
