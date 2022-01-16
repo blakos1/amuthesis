@@ -1,18 +1,33 @@
 # Metody {#metody}
 
+## Reklasyfikacja danych CLC
+W celu zwiększenia przejrzystości analizy, klasy występujące na analizowanym obszarsze zostały poddane reklasyfikacji.
+Dla trzeciego poziomu szczegółowości danych rastrowych CORINE Land Cover wyróżnione zostały 44 klasy pokrycia terenu.
+Na terytorium Polski spośród 44 możliwych klas występują 33 klasy.
+
+W wyniku reklasyfikacji, ostateczna ilość klas została zmniejszona do 7.
+Wyróżnione klasy to: tereny antropogeniczne, tereny rolne, lasy, tereny krzewiaste, tereny z rzadszą roślinnością, obszary podmokłe, obszary wodne.
+Ostatecznie, wartości pikseli z danych rastrowych CLC zostały zamienione na nowe
+
+**Mapy pokazujące jak wygląda fragment terenu przed i po reklasyfikacji**
+**Tabelka/wykres pokazujące co zostało zreklasyfikowane w co innego?**
+
+## Wykorzystane oprogramowanie
+Wszystkie obliczenia i ryciny zostały przygotowane za pomocą języka R.
+Najważniejszym pakietem języka R, który umożliwił przeprowadzenie analiz zmian strukury przestrzennej był pakiet *motif* [@R-motif].
+Wizualizacje danych przestrzennych stworzone zostały z wykorzystaniem pakietu *tmap* [@R-tmap], natomiast do wizualizacji danych ilościowych wykorzystany został pakiet *ggplot2* [@R-ggplot2].
+
+<!--
 Wykorzystane pakiety:
 motif - analiza przestrzenna wzorców
 sf, stars, raster - obróbka danych przestrzennych
 tmap, ggplot2, treemapify - wizualizacja danych
 dplyr, tidyr, stringr, readr, purrr
+-->
 
-Praca opiera się na analizie przestrzennej wzorców przestrzennych/krajobrazowych (pattern-based spatial analysis).
-Analiza wykonana została na trzech stopniach: dla całego regionu, dla regularnych krajobrazów lokalnych, oraz dla nieregularnych krajobrazów lokalnych.
-Regularne krajobrazy lokalne powstały poprzez podział obszaru badań na jednakowe kwadraty, o boku 100 pikseli rastra wejściowego.
-Nieregularne krajobrazy lokalne zostały stworzone poprzez przycięcie rastrów do granic powiatów i mezoregionów.
-
-W analizie wykorzystane zostały macierze współwystępowania (co-occurence matrix/coma)
-
+## Analiza struktury przestrzennej
+W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przestrzennej, dane zostały przeanalizowane na czterech poziomach: dla całego zbioru danych (t.j. na poziomie krajowym), poprzez wydobycie wartości dla kwadratów o wymiarach 100x100 pikseli, na poziomie powiatowym oraz na poziomie mezoregionów.
+Kwadraty stanowiące siatkę regularnych krajobrazów lokalnych obejmują powierzchnię 100 kilometrów kwadratowych.
 
 <!--
 Rozdział **Metody** zawiera opis użytych metod (np. statystycznych czy geostatystycznych) oraz technologii (np. pakiety R).

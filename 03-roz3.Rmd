@@ -3,11 +3,14 @@
 Obszar badań obejmuje terytorium Polski, włącznie z obszarem morskich wód wewnętrznych i morzem terytorialnym.
 
 ## Dane
+
+### Dane rastrowe
 Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu CORINE Land Cover pobrane ze strony Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover).
-Wykorzystane zostały dane CLC 1990 oraz CLC 2018
+Zastosowano dane dla lat 1990 i 2018.
 Dane pobrane zostały w formacie rastrowym GeoTiff o rozdzielczości przestrzennej 100 metrów, co oznacza, że jeden piksel rastra obejmuje 1 hektar powierzchni.
 Wykorzystany układ współrzędnych to EPSG:3035 (ETRS-LAEA).
 
+### Dane wektorowe
 Wykorzystane zostały także dane wektorowe z granicami Polski i obszarami powiatów z Państwowego Rejestru Granic (PRG) pobrane z Geoportalu (https://www.geoportal.gov.pl/dane/panstwowy-rejestr-granic) oraz dane wektorowe z obszarami mezoregionów, pobrane ze strony Geoforum (https://geoforum.pl/news/25816/opublikowano-nowe-granice-regionow-geograficznych)
 
 <!--
@@ -30,6 +33,7 @@ Podobnie wygląda odnoszenie się do plików graficznych.
 Tutaj wewnątrz bloku kodu należy użyć funkcji `knitr::include_graphics()` (Rycina \@ref(fig:rycina2)).
 -->
 
+<!--
 ```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 po reklasyfikacji", out.width=400}
 knitr::include_graphics("figures/clc90.png")
 ```
@@ -64,49 +68,7 @@ knitr::include_graphics("figures/treemap_faceted.png")
 ```
 
 
-```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
-knitr::include_graphics("figures/map_grid.png")
-```
-```{r rycina10, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla powiatów", out.width=400}
-knitr::include_graphics("figures/map_dist.png")
-```
-```{r rycina11, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla mezoregionów", out.width=400}
-knitr::include_graphics("figures/map_meso.png")
-```
-
-
-```{r rycina12, echo=FALSE, fig.cap="Obszar z największymi zmianami w siatce 10x10km", out.width=400}
-knitr::include_graphics("figures/top1_grid.png")
-```
-```{r rycina13, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród powiatów", out.width=400}
-knitr::include_graphics("figures/top1_dist.png")
-```
-```{r rycina14, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród mezoregionów", out.width=400}
-knitr::include_graphics("figures/top1_meso.png")
-```
-
-
-```{r rycina15, echo=FALSE, fig.cap="6 obszarów z największymi zmianami w siatce 10x10km", out.width=400}
-knitr::include_graphics("figures/top6_grid.png")
-```
-```{r rycina16, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród powiatów", out.width=400}
-knitr::include_graphics("figures/top6_dist.png")
-```
-```{r rycina17, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród mezoregionów", out.width=400}
-knitr::include_graphics("figures/top6_meso.png")
-```
-
-
-```{r rycina18, echo=FALSE, fig.cap="Histogram dla siatki 10x10km", out.width=400}
-knitr::include_graphics("figures/hist_grid.png")
-```
-```{r rycina19, echo=FALSE, fig.cap="Histogram dla powiatów", out.width=400}
-knitr::include_graphics("figures/hist_dist.png")
-```
-```{r rycina20, echo=FALSE, fig.cap="Histogram dla mezoregionów", out.width=400}
-knitr::include_graphics("figures/hist_meso.png")
-```
-
+-->
 <!--
 Odnoszenie się do tabel odbywa się poprzez operator `\@ref()` wraz z prefiksem `tab:`.
 Natomiast tworzenie podpisu nad tabelą ma miejsce wewnątrz funkcji `knitr::kable()`. 

@@ -4,6 +4,11 @@ Wprowadzenie powinno mieć charakter opisu od ogółu do szczegółu (np. trzy-p
 Pierwszy paragraf powinien być najbardziej ogólny, a kolejne powinny przybliżać czytelnika do problemu.
 -->
 
+Monitorowanie zmian pokrycia terenu jest ważne ze względu na ich wpływ na środowisko i klimat.
+Zmiany pokrycia terenu są skutkiem zmieniającego się klimatu i antropopresji.
+Zmiany te także same bezpośrednio wpływają na zmiany klimatu i warunki środowiskowe oraz mają ścisły związek z migracją ludności i warunkami gospodarczymi.
+
+Dlatego też ocena zmian pokrycia terenu ma pierwszorzędne znaczenie dla skutecznego planowania i zarządzania zasobami.
 
 <!--
 Przedostatni paragraf powinien określić jaki jest problem (są problemy), który praca ma rozwiązać i dlaczego jest to (są one) ważne.
