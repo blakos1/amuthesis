@@ -6,7 +6,7 @@ Możliwa struktura streszczenia to: (1) 1-3 zdania wstępu do problemu (czym si�
 -->
 <!-- Słowa kluczowe: (4-6 słów/zwrotów opisujących treść pracy, które nie wystąpiły w tytule) -->
 
-Słowa kluczowe: sktruktura przestrzenna, pokrycie terenu, CORINE Land Cover, CLC
+Słowa kluczowe: struktura przestrzenna, pokrycie terenu, CORINE Land Cover, CLC
 
 ## Abstract {-}
 

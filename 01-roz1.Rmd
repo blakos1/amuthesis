@@ -1,7 +1,28 @@
 # Wprowadzenie {#wprowadzenie}
+
+
+<!-- Wstęp trzeba znacząco rozwinąć: -->
+<!-- 1.Co to jest pokrycie terenu? -->
+<!-- 2.Co to monitorowanie tego pokrycia i po co? -->
+<!-- 3.Przykłady skrótowo opisane najważniejszych badań (najpierw w skali globalnej, później kontynentalnej, a później jeden akapit o Polsce) -->
+<!-- 4.Wyjaśnienie istniejących luk w badaniach, np. tego, że struktury przestrzenne pokrycia terenu nie były brane pod uwagę -->
+<!-- 5.Cel -->
+
+<!-- Co to jest pokrycie terenu? -->
+Pokrycie terenu oznacza "znajdujące się na powierzchni Ziemi przedmioty terenowe powstałe w wyniku działalności sił przyrody lub całkowicie wytworzone przez działalność gospodarczą człowieka. W zakres wchodzą między innymi rzeźba terenu, zjawiska hydrograficzne, kompleksy roślinne, osiedla, drogi, formy antropogeniczne (Olędzki, 1987)
+
+Co to monitorowanie tego pokrycia i po co?
+
+
 <!--
-Wprowadzenie powinno mieć charakter opisu od ogółu do szczegółu (np. trzy-pięć paragrafów).
-Pierwszy paragraf powinien być najbardziej ogólny, a kolejne powinny przybliżać czytelnika do problemu.
+Pokrycie terenu dla dużych obszarów jest zazwyczaj opisywane używając danych o pokryciu terenu (ang. land cover).
+Dla obszaru Europy takie dane to, między innymi, https://land.copernicus.eu/pan-european/corine-land-cover oraz http://www.geo-informatie.nl/fuchs003/.
+
+Zmiany pokrycia terenu można analizować używajać wielu różnych podejść.
+Dwa podstawowe sposoby to (a) analiza zmian poszczególnych oczek siatki i (b) analiza zmian tzw. “lokalnych krajobrazów” (ang. local landscapes).
+W pierwszym sposobie często stosuje się porównanie jaki był udział różnych kategorii w roku A i w roku B oraz określenie z jakiej na jaką kategorię nastąpiły zmiany.
+Drugi sposób polega natomiast na podzieleniu całego badanego obszaru na mniejsze jednostki przestrzenne (lokalne krajobrazy, np. regularne kwadraty), a następnie wykonanie różnorodnych analiz wewnątrz lokalnych krajobrazów.
+Używając lokalnych krajobrazów możliwe jest określenie, między innymi, (a) czy zaszła ogólna zmiana w lokalnym wzorcu przestrzennym i jak duża to była zmiana, (b) jak zmieniła się przestrzenna kompozycja i konfiguracja.
 -->
 
 Monitorowanie zmian pokrycia terenu jest ważne ze względu na ich wpływ na środowisko i klimat.
@@ -10,15 +31,17 @@ Zmiany te także same bezpośrednio wpływają na zmiany klimatu i warunki środ
 
 Dlatego też ocena zmian pokrycia terenu ma pierwszorzędne znaczenie dla skutecznego planowania i zarządzania zasobami.
 
-<!--
-Przedostatni paragraf powinien określić jaki jest problem (są problemy), który praca ma rozwiązać i dlaczego jest to (są one) ważne.
--->
 
-
-<!--
-Wprowadzenie powinno być zakończone stwierdzeniem celu pracy.
-Dodatkowo tutaj może być również krótki opis co zostało zrealizowane w pracy.
--->
 
 Głównym celem tej pracy jest analiza głównych prawidłowości dotyczących zmian struktury przestrzennej pokrycia terenu dla obszaru Polski.
 Dodatkowym celem było stworzenie mapy trendów zmian zaszłych w przeciągu 18 lat dynamicznego rozwoju oraz ulepszenie istniejącego oprogramowania do analiz lokalnych krajobrazów (no czy to ulepszenie mi się udało to do końca nie jestem pewien lol)
+
+<!--
+Wprowadzenie powinno mieć charakter opisu od ogółu do szczegółu (np. trzy-pięć paragrafów).
+Pierwszy paragraf powinien być najbardziej ogólny, a kolejne powinny przybliżać czytelnika do problemu.
+
+Przedostatni paragraf powinien określić jaki jest problem (są problemy), który praca ma rozwiązać i dlaczego jest to (są one) ważne.
+
+Wprowadzenie powinno być zakończone stwierdzeniem celu pracy.
+Dodatkowo tutaj może być również krótki opis co zostało zrealizowane w pracy.
+-->

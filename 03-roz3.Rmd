@@ -1,86 +1,38 @@
 # Materiały {#materialy}
-## Obszar badań
+
+## Obszar badań {#obszar_badan}
+
 Obszar badań obejmuje terytorium Polski, włącznie z obszarem morskich wód wewnętrznych i morzem terytorialnym.
 
-## Dane
+## Dane CORINE Land Cover {#clc}
+<!-- Więcej o danych -- jak zostały stworzone, w oparciu o co, jaka jest ich dokładność, dla jakich lat i w jakiej rozdzielczości są dostępne, ile wyróżniają kategorii, itd... -->
 
-### Dane rastrowe
-Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu CORINE Land Cover pobrane ze strony Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover).
-Zastosowano dane dla lat 1990 i 2018.
-Dane pobrane zostały w formacie rastrowym GeoTiff o rozdzielczości przestrzennej 100 metrów, co oznacza, że jeden piksel rastra obejmuje 1 hektar powierzchni.
+Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu - CORINE Land Cover (CLC).
+Program CORINE (Co-ordination of Information on Environment) został przyjęty w 1985 roku przez Komisję Europejską.
+Jego celami było:
++ zgromadzenie informacji o stanie środowiska geograficznego w zakresie priorytetowych tematów dla wszystkich krajów Wspólnoty,
++ skoordynowanie wysiłków w zakresie gromadzenia danych i organizacji informacji na szczeblu krajów członkowskich i na szczeblu międzynarodowym,
++ zagwarantowanie spójności informacji i zapewnienie kompatybilności danych
+(źródło: https://clc.gios.gov.pl).
+
+W większości państw CLC jest tworzony poprzez wizualną interpretację obrazów satelitarnych o wysokiej rozdzielczości.
+W kilku państwach stosuje się różne rozwiązania półautomatyczne, wykorzystujące między innymi przetwarzanie obrazów satelitarnych, GIS i generalizację danych.
+
+Efekty programu CORINE udostępniane są w formacie rastrowym GeoTiff o rozdzielczości przestrzennej 100 metrów
+(oznacza to, że jeden piksel rastra obejmuje 1 hektar powierzchni) oraz formatach wektorowych ESRI i SQLite geodatabase.
+Minimalna mapowana jednostka dla CLC wynosi 25 hektarów dla obiektów przestrzennych i 100 metrów dla obiektów liniowych.
+Dane inwentaryzacyjne CORINE Land Cover dostępne dla lat 1990, 2000, 2006, 2012 i 2018, zorganizowane są hierarchicznie w trzech poziomach szczegółowości.
+Dla trzeciego poziomu danych CLC wyróżnione zostały 44 klasy pokrycia terenu, obejmujące wszystkie formy pokrycia terenu występujące na kontynencie europejskim.
+Dodatkowo, wraz z każdym kolejnym produktem CLC powstaje także baza danych zmian między nowymi danymi, a ostatnio powstałą bazą, dla której stosuje się minimalną mapowaną jednostkę wynoszącą 5 hektarów.
+
+Do celów tej pracy, użyte zostały dane rastrowe, obejmujące obszar całej Europy, dla lat 1990 i 2018, udostępnione do pobrania na stronie Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover).
 Wykorzystany układ współrzędnych to EPSG:3035 (ETRS-LAEA).
 
-### Dane wektorowe
-Wykorzystane zostały także dane wektorowe z granicami Polski i obszarami powiatów z Państwowego Rejestru Granic (PRG) pobrane z Geoportalu (https://www.geoportal.gov.pl/dane/panstwowy-rejestr-granic) oraz dane wektorowe z obszarami mezoregionów, pobrane ze strony Geoforum (https://geoforum.pl/news/25816/opublikowano-nowe-granice-regionow-geograficznych)
 
-<!--
-Celem tego rozdziału jest przedstawienie użytych w pracy danych.
-Należy wyjaśnić jakie dane zostały użyte, jakiego są one rodziaju, dla jakiego okresu zostały pobrane/stworzone, co one zawierają, etc.
+## Dane dodatkowe {#dane_dodatkowe}
 
-W tym rozdziale warto dodać ryciny i tabele przedstawiające użyte dane.
+W pracy wykorzystane zostały także dane wektorowe dotyczące oficjalnego podziału terytorialnego Polski pozyskane z Państwowego Rejestru Granic (PRG) udostępnionym na Geoportalu (https://www.geoportal.gov.pl/dane/panstwowy-rejestr-granic) oraz dane wektorowe z obszarami mezoregionów, pobrane z witryny Geoserwis (http://geoserwis.gdos.gov.pl/mapy/), prowadzonej przez Generalną Dyrekcje Ochrony Środowiska.
+Wykorzystany podział na mezoregiony jest efektem doprecyzowania i uszczegółowienia granic regionów fizyczno-geograficznych z uwzględnieniem metodyki proponowanej w ostatnim podziale fizyczno-geograficznym prof. Jerzego Kondrackiego. (1998, 2000). 
 
-Zwróć uwagę, że poniższe bloki kodu mają parametr `echo=FALSE`; oznacza to, że będą one niewidoczne w wynikowym pliku PDF.
-Każdy z bloków kodu musi mieć unikalną nazwę.
-Dodanie podpisu pod rycinę odbywa się używając parametru `fig.cap`.
-Następnie do tej ryciny można się odnieść używając operatora `\@ref()` wraz z prefiksem `fig:`.
-Przykładowo, odniesienie się do pierwszej ryciny wymaga wpisania `\@ref(fig:rycina1)` (Rycina \@ref(fig:rycina1)).
-
-```{r rycina0, echo=FALSE, fig.cap="Moja pierwsza rycina"}
-plot(1, 4)
-```
-
-Podobnie wygląda odnoszenie się do plików graficznych. 
-Tutaj wewnątrz bloku kodu należy użyć funkcji `knitr::include_graphics()` (Rycina \@ref(fig:rycina2)).
--->
-
-<!--
-```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 po reklasyfikacji", out.width=400}
-knitr::include_graphics("figures/clc90.png")
-```
-```{r rycina2, echo=FALSE, fig.cap="Corine Land Cover 2018 po reklasyfikacji", out.width=400}
-knitr::include_graphics("figures/clc18.png")
-```
-
-
-```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji", out.width=400}
-knitr::include_graphics("figures/lc_bin.png")
-```
-
-
-```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 1990", out.width=400}
-knitr::include_graphics("figures/lcpch90.png")
-```
-```{r rycina5, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 2018", out.width=400}
-knitr::include_graphics("figures/lcpch18.png")
-```
-
-
-```{r rycina6, echo=FALSE, fig.cap="Procentowy udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
-knitr::include_graphics("figures/stacked.png")
-```
-
-
-```{r rycina7, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
-knitr::include_graphics("figures/treemap_main.png")
-```
-```{r rycina8, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
-knitr::include_graphics("figures/treemap_faceted.png")
-```
-
-
--->
-<!--
-Odnoszenie się do tabel odbywa się poprzez operator `\@ref()` wraz z prefiksem `tab:`.
-Natomiast tworzenie podpisu nad tabelą ma miejsce wewnątrz funkcji `knitr::kable()`. 
-Dodatkowo możliwe jest użycie pakietu **kableExtra** [@R-kableExtra] do określenia szerokości kolumn (Tabela \@ref(tab:tabela1)).
-
-```{r tabela1, echo=FALSE}
-library(magrittr)
-df = data.frame(a = 1:5, b = letters[1:5])
-knitr::kable(df, 
-             caption = "Moja pierwsza tabela",
-             booktabs = TRUE) %>% 
-  kableExtra::column_spec(1, width = "2cm") %>% 
-  kableExtra::column_spec(2, width = "4cm")
-```
--->
+<!-- Physico-geographical mesoregions of Poland: Verification and adjustment of boundaries on the basis of contemporary spatial data, „Geographia Polonica” 2018, vol. 91, iss. 2, s.143-170 -->
+<!-- Umieszczonej pod adresem http://www.geographiapolonica.pl/issue/item/91_2.html -->

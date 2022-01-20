@@ -1,32 +1,53 @@
 # Metody {#metody}
 
 ## Reklasyfikacja danych CLC
-W celu zwiększenia przejrzystości analizy, klasy występujące na analizowanym obszarsze zostały poddane reklasyfikacji.
-Dla trzeciego poziomu szczegółowości danych rastrowych CORINE Land Cover wyróżnione zostały 44 klasy pokrycia terenu.
-Na terytorium Polski spośród 44 możliwych klas występują 33 klasy.
 
-W wyniku reklasyfikacji, ostateczna ilość klas została zmniejszona do 7.
-Wyróżnione klasy to: tereny antropogeniczne, tereny rolne, lasy, tereny krzewiaste, tereny z rzadszą roślinnością, obszary podmokłe, obszary wodne.
-Ostatecznie, wartości pikseli z danych rastrowych CLC zostały zamienione na nowe
+W celu ułatwienia interpretacji wyników, klasy CLC zostały poddane reklasyfikacji.
+Reklasyfikacja to proces ponownego przypisania jednej lub więcej wartości w zestawie danych rastrowych do nowych wartości wyjściowych.
+Dane o pokryciu terenu w programie CORINE udostępniane są na najniższym, trzecim poziomie podziału kategorii.
+Wykorzystanie wszystkich klas pokrycia terenu występujących na obszarze Polski doprowadziłoby do nadmiaru informacji i tym samym zwiększenia trudności interpretacji wyników.
+Aby uniknąć powyższej sytuacji, klasy zostały zgrupowane do oryginalnego podziału dla pierwszego poziomu CLC, z wyjątkiem lasów i ekosystemów naturalnych, gdzie zastosowano podział dla poziomu drugiego.
+Oznacza to, że ostatecznie ilość klas została zmniejszona z 33 klas poziomu trzeciego występujących na obszarze Polski do 7.
+W wyniku otrzymano następujące kategorie pokrycia terenu: tereny antropogeniczne, tereny rolne, lasy, tereny krzewiaste, tereny z rzadszą roślinnością, obszary podmokłe, obszary wodne.
+
+
+```{r tabela1, echo=FALSE}
+library(magrittr)
+library(readr)
+library(kableExtra)
+
+clc_legend = read.csv2("data/clc_legend.csv", header = FALSE, encoding = "UTF-8")
+clc_legend = clc_legend[2:nrow(clc_legend), ]
+rownames(clc_legend) = NULL
+colnames(clc_legend) = c("Poziom pierwszy", "Poziom drugi", "Poziom trzeci")
+
+clc_legend[1,1] <- cell_spec(clc_legend[[1,1]], format = "latex", bold = T)
+clc_legend[2,1] <- cell_spec(clc_legend[[2,1]], format = "latex", bold = T)
+
+kbl(clc_legend, align = "l") %>%
+  kable_paper(full_width = F) %>%
+  # column_spec(1, bold = T) %>%
+  collapse_rows(columns = 1:2, valign = "middle")
+```
+
 
 **Mapy pokazujące jak wygląda fragment terenu przed i po reklasyfikacji**
 **Tabelka/wykres pokazujące co zostało zreklasyfikowane w co innego?**
+<!-- Tabela będzie tutaj konieczna, mapy też. -->
 
 ## Wykorzystane oprogramowanie
-Wszystkie obliczenia i ryciny zostały przygotowane za pomocą języka R.
+Wszystkie obliczenia i ryciny zostały przygotowane za pomocą języka *R* [@R-base].
+<!-- Cytowanie R warto dodać tutaj. citation() -->
 Najważniejszym pakietem języka R, który umożliwił przeprowadzenie analiz zmian strukury przestrzennej był pakiet *motif* [@R-motif].
+<!-- Tutaj można dodać dalej podsekcję o metodach analizy struktur przestrzennych -- co to jest, na jakich zasadach się opiera, co otrzymywane jest w wyniku, etc. -->
 Wizualizacje danych przestrzennych stworzone zostały z wykorzystaniem pakietu *tmap* [@R-tmap], natomiast do wizualizacji danych ilościowych wykorzystany został pakiet *ggplot2* [@R-ggplot2].
 
-<!--
-Wykorzystane pakiety:
-motif - analiza przestrzenna wzorców
-sf, stars, raster - obróbka danych przestrzennych
-tmap, ggplot2, treemapify - wizualizacja danych
-dplyr, tidyr, stringr, readr, purrr
--->
+### Pakiet Motif
+<!-- Wytłumaczyć działanie pakietu motif i co nim można zrobić, trochę jak działa itp -->
 
 ## Analiza struktury przestrzennej
 W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przestrzennej, dane zostały przeanalizowane na czterech poziomach: dla całego zbioru danych (t.j. na poziomie krajowym), poprzez wydobycie wartości dla kwadratów o wymiarach 100x100 pikseli, na poziomie powiatowym oraz na poziomie mezoregionów.
+<!-- W tej części można dodać jakiś diagram pokazujący kolejne kroki analizy. Trzeba też dokładniej te kroki opisać (proszę postawić się w miejscu osoby, która chciałaby zrobić to samo co Pan, ale dla innego kraju) -->
 Kwadraty stanowiące siatkę regularnych krajobrazów lokalnych obejmują powierzchnię 100 kilometrów kwadratowych.
 
 <!--
