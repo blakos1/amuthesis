@@ -4,30 +4,15 @@
 CLC - rozdzielczość 100m
 ESA CCI LC - rozdzielczość 300m
 
-<!--
-Ten rozdział zawiera wyjaśnienie kontekstu pracy.
+##Inne analizy
+<!-- dodać cytowania -->
+<!-- Global assessment and mapping of changes in mesoscale landscapes: 1992–2015 Jakub Nowosad, Tomasz F. Stepinski,Pawel Netzel -->
 
-Pisząc ten rozdział proszę pomyśleć o osobach, które zupełnie nie znają opisywanej tematyki.
-Należy tutaj krok po kroku wyjaśnić podstawowe koncepcje, istotność problemu, wyniki poprzednich podobnych badań, itd.
-Ten rozdział obejmuje tylko kwestie, które już zostały wykonane przez inne osoby - nowe wyniki mają swoje miejsce w rozdziale \@ref(wyniki).
 
-Każda kwestia opisana w tym rozdziale powinna być cytowana.
-Dodatnie cytowania odbywa się poprzez uzupełnienie pliku `thesis.bib` zapisem w formacie BibTeX, a następnie dodanie nazwy referencji poprzedzonej znakiem `@`.
-Przykładowo, zacytowanie książki Geocomputation with R odbywa się poprzez [@lovelace_geocomputation_2019].
--->
-<!-- https://tex.stackexchange.com/questions/143/what-are-good-sites-to-find-citations-in-bibtex-format -->
 
-<!--
-W przypadku, gdy cytowanie zostało poprawnie wpisane oraz istnieje w pliku `thesis.bib` to bibliografia powinna się automatycznie wygenerować na końcu pracy.
-
-W przypadku, gdy praca dyplomowa opisuje konkretny obszar to można po tym rozdziale stworzyć kolejny rozdział opisujący "obszar badań".
-
-Ten i kolejne rozdziału moją mieć także podrozdziały.
-Tworzenie podrozdziałów polega na stworzeniu nowej lini rozpoczynającej się od znaków `##` a następnie tytułu podrozdziału.
-Dodatkowo w postaci `{#}` można dodać skrót nazwy rozdziału/podrozdziału umożliwiający odnoszenie się do niego używając operatora `\@ref()`.
-
-## Podrozdział {#podr}
-
-Przykładowo, "te kwestie zostały opisane w podrozdziale \@ref(podr)".
-Zwróć uwagę, że w ten sposób automatycznie tworzony jest odnośnik w pliku PDF.
--->
+<!-- Zmiany pokrycia terenu w Polsce w latach 1990-2012 na podstawie danych CORINE Land Cover, Mierzwiak-->
+W przeszłości wykonana została podobna analiza zmian pokrycia terenu dla obszaru Polski, przeprowadzona dla lat 1990-2012.
+W przeciwieństwie do wspomnianej pracy, w tej pracy nie zostały wykorzystane bazy danych zmian pokrycia terenu między produktami programu CORINE.
+Zamiast tego, zmiany pokrycia terenu zostały obliczone za pomocą obliczenia różnic w komórkach analizowanych rastrów.
+Dodatkowo, w tej pracy przyjęto rozszerzone podejście do analizy zmian przestrzennych.
+Poza ogólnymi zmianami ilościowymi, obliczonymi dla całego analizowanego obszaru, w pracy uwzględniono także analizy struktur przestrzennych w oparciu o obliczenia sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
