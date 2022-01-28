@@ -1,18 +1,17 @@
 # Przegląd literatury {#lit}
 
-## Porównanie danych CLC z danymi ESA CCI LC
-CLC - rozdzielczość 100m
-ESA CCI LC - rozdzielczość 300m
-
-##Inne analizy
-<!-- dodać cytowania -->
 <!-- Global assessment and mapping of changes in mesoscale landscapes: 1992–2015 Jakub Nowosad, Tomasz F. Stepinski,Pawel Netzel -->
+W pracy [@NOWOSAD2019332] przedstawione zostały metody analizy zmian pokrycia terenu z wykorzystaniem technik opartych o analizy struktur przestrzennych, na których bazuje ta praca.
+Jednakże, ze względu na zastosowanie w powyższej pracy danych o pokryciu terenu pochodzących z programu ESA Climate Change Initiative (ESA CCI) o rozdzielczości przestrzennej 300m, wynikowa mapa globalnych zmian pokrycia terenu w latach 1992-2015 umożliwia określenie trendów zmian przestrzennych w badanym okresie wyłącznie w skali globalnej.
+W tej pracy, w celu wykonania szczegółowej analizy, bardziej dostosowanej do rozmiaru państw europejskich, wykorzystano dane o pokryciu terenu udostępniane w ramach europejskiego programu CORINE.
+Dane wynikowe programu CORINE użyte do celów tej pracy zostały bardziej wnikliwie opisane w podrozdziale \@ref(clc).
 
+
+**tu potrzebuje jeszcze jednej pracy, najlepiej w skali europejskiej**
 
 
 <!-- Zmiany pokrycia terenu w Polsce w latach 1990-2012 na podstawie danych CORINE Land Cover, Mierzwiak-->
-W przeszłości wykonana została podobna analiza zmian pokrycia terenu dla obszaru Polski, przeprowadzona dla lat 1990-2012.
+W publikacji autorstwa [@Mierzwiak_Całka_2019] także została wykonana analiza zmian pokrycia terenu dla obszaru Polski, oparta na danych pochodzących z programu CORINE, przeprowadzona dla lat 1990-2012.
 W przeciwieństwie do wspomnianej pracy, w tej pracy nie zostały wykorzystane bazy danych zmian pokrycia terenu między produktami programu CORINE.
-Zamiast tego, zmiany pokrycia terenu zostały obliczone za pomocą obliczenia różnic w komórkach analizowanych rastrów.
-Dodatkowo, w tej pracy przyjęto rozszerzone podejście do analizy zmian przestrzennych.
-Poza ogólnymi zmianami ilościowymi, obliczonymi dla całego analizowanego obszaru, w pracy uwzględniono także analizy struktur przestrzennych w oparciu o obliczenia sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
+Zamiast tego, ilościowe zmiany pokrycia terenu zostały określone za pomocą obliczenia różnic w komórkach analizowanych rastrów dla lat 1990 i 2018.
+Co więcej, podejście do analizy zmian przestrzennych zostało rozszerzone o analizę struktur przestrzennych na podstawie metod przedstawionych w pracy [@NOWOSAD2019332].

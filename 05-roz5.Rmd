@@ -44,30 +44,41 @@ kbl(lc_changes,
 
 ```
 
-Lokalizacje, na których zaszły zmiany pokrycia terenu przedstawia rycina \@ref(fig:rycina3).
-Największą ilość zmian zauważyć można w południowej części kraju na obszarze całego województwa śląskiego oraz zachodniej części województwa małopolskiego.
-Dużą ilością zmian pokrycia terenu o rozproszonym charakterze cechują się także województwo mazowieckie, województwo świętokrzyskie, centralna część województwa podkarpackiego oraz zachodnia część województwa dolnośląskiego.
-Analizując mapę zauważyć można także obszary na których zaszły znaczne zmiany pokrycia terenu o charakterze skoncentrowanym.
+Lokalizacje komórek rastra, które w okresie 1990-2018 zmieniły kategorie pokrycia terenu przedstawia rycina \@ref(fig:rycina3).
+Analizując rycinę, zauważyć można występowanie zmian zarówno o charakterze rozproszonym, jak i skoncentrowanym.
+Największą ilość zmian o charakterze rozproszonym zauważyć można w południowej części kraju na obszarze całego województwa śląskiego oraz zachodniej części województwa małopolskiego.
+Dużą ilością rozproszonych zmian pokrycia terenu cechują się także województwo mazowieckie, województwo świętokrzyskie, centralna część województwa podkarpackiego oraz zachodnia część województwa dolnośląskiego.
+Znaczna większość zmian na tych obszarach stanowi zmianę z terenów rolnych w tereny antropogeniczne.
+
+Obszary na których zaszły znaczne zmiany pokrycia terenu o charakterze skoncentrowanym wymienione zostały poniżej, wraz z wyjaśnieniem w jakim miejscu znajdują się te obszary, i z jakimi zmianami kategorii są związane.
+Duże obszary zmienione w wyniku działalności człowieka:
 
 1. Kopalnia Węgla Brunatnego Bełchatów i zwałowisko zewnętrzne Góra Kamieńska, będąca jego skutkiem.
 Lasy i tereny rolne zostały przekształcone w tereny antropogeniczne.
-2. Kopalnia Węgla Brunatnego Konin
+2. Rezerwat przyrody Jeziorsko
+Obszary wodne powstałe z terenów podmokłych.
+3. Kopalnia Węgla Brunatnego Adamów
+Tereny leśne i rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
+4. Kopalnia Węgla Brunatnego Konin
 Tereny rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
-3. Rezerwat przyrody Jeziorsko
-Obszary wodne powstałe z terenów podmokłych
-4. Kopalnia Węgla Brunatnego Turów
-Tereny rolne przekształcone głównie w tereny antropogeniczne.
 5. Ośrodek Szkolenia Poligonowego Wojsk Lądowych Żagań
 Różne przejścia między kategoriami, głównie zmiana terenów z rzadszą roślinnością w tereny krzewiaste oraz terenów krzewiastych w tereny zalesione.
-6. Okolice Mazurskiego Parku Krajobrazowego
-Przemiana terenów krzewiastych w tereny leśne.
-7. Bory Tucholskie
+6. Kopalnia Węgla Brunatnego Turów
+Tereny rolne przekształcone głównie w tereny antropogeniczne.
+7. Zalew Siemianówka
+Zmiana terenów podmokłych w obszary wodne oraz zmiana terenów rolnych w tereny podmokłe. Skutek spiętrzenia wód w zbiorniku zaporowym.
+
+Duże obszary zmienione w wyniku zjawisk naturalnych:
+
+8. Bory Tucholskie
 Zmiana terenów leśnych w tereny krzewiaste, konsekwencje trąby powietrznej z 2012 roku, która zniszczyła 520 ha lasu.
-8. Nadleśnictwo Rudy Raciborskie
+9. Mazury, nadleśnictwo Pisz
+Przemiana terenów krzewiastych w tereny leśne. Skutki trąb powietrznych z 2002 roku oraz działań zapobiegających dalszego zniszczenia lasów poprzez wykonanie licznych pasów przeciwpożarowych.
+10. Kotlina Raciborska, nadleśnictwo Rudy Raciborskie
 Pożar lasu w nadleśnictwie Rudy Raciborskie z 1992 roku. Pożar strawił 9062 ha lasów
 
 ```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji dla lat 1990-2018", out.width=400}
-knitr::include_graphics("figures/lc_bin.png")
+knitr::include_graphics("figures/lc_bin2.png")
 ```
 
 

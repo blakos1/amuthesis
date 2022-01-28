@@ -21,10 +21,10 @@ Otrzymano następujące kategorie pokrycia terenu:
 - obszary wodne.
 
 ```{r rycina41, echo=FALSE, fig.cap="Porównanie danych CLC dla obszaru miasta Poznań przed i po reklasyfikacji", out.width=400}
-knitr::include_graphics("figures/clc_diff.png")
+knitr::include_graphics("figures/clc_diff2.png")
 ```
 
-**wkleić raster contingency table w formie macierzy bez opisów klas tylko z samymi cyframi**
+**wkleić raster contingency table "Tabela 3. Kierunki zmian użytkowania ziemi w Polsce w latach 1930–2000"**
 <!--
 ```{r tabela1, echo=FALSE}
 library(magrittr)
@@ -49,6 +49,11 @@ kbl(clc_legend, align = "l", booktabs = TRUE, longtable = FALSE) %>%
   column_spec(1:3, width = "15em") %>%
   kable_styling(font_size = 7) %>% 
   collapse_rows(columns = 1:2)
+```
+-->
+<!--
+```{r rycina43, echo=FALSE, fig.cap="Kategorie pokrycia terenu wyróżnione w bazie danych CORINE Land Cover."}
+knitr::include_graphics("figures/CLC_legend_PL.pdf")
 ```
 -->
 
@@ -150,6 +155,7 @@ Tabela ta zawiera informacje o ilości komórek danej kategorii występujących 
 Następnie, obliczona została tabela krzyżowa (**użyć tego czy "tablica kontyngencji" - contingency table?**) zmian zreklasyfikowanych kategorii między analizowanymi latami.
 Otrzymana tabela krzyżowa zawiera dane o wszystkich zmianach pokrycia terenu zaszłych między każdą możliwą parą kategorii pokrycia terenu.
 Ostatecznie, stworzona została tabela \@ref(tab:tabela2) zawierająca podstawowe statystyki podsumowujące zmiany zaszłe na obszarze Polski w podziale na zreklasyfikowane kategorie pokrycia terenu.
+
 Obliczone statystyki to między innymi: suma powierzchni dla lat 1990 i 2018, bilans zmian między latami, ubytki i przyrosty powierzchni w analizowanym czasie oraz procentowa zmiana stanu danej kategorii.
 Podział na bilans zmian, ubytki oraz przyrosty wywodzi się z tego, że bilans zmian stanowi wyłącznie różnicę względną między stanem z roku 1990 a tym z roku 2018.
 Oznacza to, że gdy w teoretycznej sytuacji dwie komórki rastra, o różnych kategoriach, zmienią swoje kategorie na kategorię drugiej komórki - bilans zmian pozostaje zerowy.
@@ -160,8 +166,9 @@ Przyrosty danej kategorii oznaczają ilość komórek, które w roku 1990 należ
 Zmiana między latami została obliczona jako stosunek stanu powierzchni z roku 2018 do stanu z roku 1990.
 Zmiana +50% oznacza, że powierzchnia z roku 2018 stanowi 150% powierzchni z roku 1990.
 Analogicznie zmiana -50% oznacza, że powierzchnia z roku 2018 stanowi 50% powierzchni z roku 1990.
+
 <!-- analiza zmian struktur przestrzennych -->
-Celem trzeciego etapu było pozyskanie obliczonych różnic w stanie struktur przestrzennych różnych jednostek przestrzennych.
+Celem trzeciego etapu było pozyskanie obliczonych różnic w stanie struktur przestrzennych jednostek przestrzennych.
 W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przestrzennej, dane zostały przeanalizowane na trzech poziomach:
 
 - poprzez wydobycie wartości dla kwadratów o wymiarach 100 na 100 pikseli,
@@ -169,6 +176,7 @@ W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przest
 - na poziomie mezoregionów.
 
 Pojedynczy obszar powstały poprzez wyodrębnienie kwadratów o wymiarach 100 na 100 pikseli obejmuje powierzchnię 100 km^2^.
+
 Do ilościowej oceny wielkości zmian każdej jednostki wykorzystuje się miary niepodobieństwa (**odmienności?**).
 W tej pracy, do określenia stopnia zmian wykorzystano odległość Jensena-Shannona obliczoną dla każdej jednostki przestrzennej.
 Miara ta przyjmuje wartości od 0 do 1.
