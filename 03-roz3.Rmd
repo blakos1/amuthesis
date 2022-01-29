@@ -1,17 +1,15 @@
 # Materiały {#materialy}
 
 ## Obszar badań {#obszar_badan}
-<!-- opisać trochę charakterystykę polski pod względem geograficznym -->
-<!-- obszar badań - zasięg, powierzchnia itp trochę geografii ;_; topografia, klimat i urbanizacja -->
-Obszar badań obejmuje terytorium Polski, włącznie z obszarem morskich wód wewnętrznych i morzem terytorialnym.
-Oficjalna powierzchnia całego państwa wynosi 32271900 ha (źródło: Rocznik statystyczny RP, 2021).
-Ze względu na wykorzystanie w pracy danych rastrowych, rzeczywista powierzchnia objęta analizą wynosi 32272074 ha.
+Obszar badań obejmuje terytorium Polski, włącznie z morskimi wodami wewnętrznymi i morzem terytorialnym.
+Oficjalna powierzchnia całego państwa wynosi 322719 km^2^ (źródło: Rocznik Statystyczny RP, 2021).
+Ze względu na wykorzystanie w pracy danych rastrowych, rzeczywista powierzchnia objęta analizą wynosi 322720,74 km^2^.
 96,7% tej powierzchni obejmują obszary lądowe, włącznie z wodami śródlądowymi.
 Pozostałą część powierzchni stanowi obszar morskich wód wewnętrznych oraz morza terytorialnego.
 
-Ukształtowanie terenu Polski ułożone jest równoleżnikowo.
-Obszary położone na północy i w centrum stanowią niziny, natomiast wyżyny i tereny górskie na południu.
-Większość powierzchni stanowią tereny nizinne, stanowiące około 75% powierzchni kraju.
+<!-- Ukształtowanie terenu Polski ułożone jest równoleżnikowo. -->
+<!-- Obszary położone na północy i w centrum stanowią niziny, natomiast wyżyny i tereny górskie na południu. -->
+<!-- Większość powierzchni stanowią tereny nizinne, stanowiące około 75% powierzchni kraju. -->
 
 
 ## Dane CORINE Land Cover {#clc}
@@ -21,34 +19,34 @@ Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu 
 Program CORINE (Coordination of Information on Environment) został przyjęty w 1985 roku przez Komisję Europejską.
 Jego celami było:
 
+(źródło: https://clc.gios.gov.pl).
 - zgromadzenie informacji o stanie środowiska geograficznego w zakresie priorytetowych tematów dla wszystkich krajów Wspólnoty,
 - skoordynowanie wysiłków w zakresie gromadzenia danych i organizacji informacji na szczeblu krajów członkowskich i na szczeblu międzynarodowym,
 - zagwarantowanie spójności informacji i zapewnienie kompatybilności danych
 
-(źródło: https://clc.gios.gov.pl).
-
 W większości państw CLC jest tworzony poprzez wizualną interpretację obrazów satelitarnych o wysokiej rozdzielczości.
 W kilku państwach stosuje się różne rozwiązania półautomatyczne, wykorzystujące między innymi przetwarzanie obrazów satelitarnych, GIS i generalizację danych.
 Minimalna mapowana jednostka dla CLC wynosi 25 hektarów dla obiektów przestrzennych i 100 metrów dla obiektów liniowych.
-Dodatkowo, wraz z każdym kolejnym produktem CLC powstaje także baza danych zmian między nowymi danymi, a ostatnio powstałą bazą, dla której stosuje się minimalną mapowaną jednostkę wynoszącą 5 hektarów.
+Dodatkowo wraz z każdym kolejnym produktem CLC powstaje także baza danych zmian między nowymi danymi, a ostatnio powstałą bazą, dla której stosuje się minimalną mapowaną jednostkę wynoszącą 5 hektarów.
 
 Efekty programu CORINE udostępniane są w formacie rastrowym GeoTiff o rozdzielczości przestrzennej 100 metrów
 (oznacza to, że jeden piksel rastra obejmuje 1 hektar powierzchni) oraz formatach wektorowych ESRI i SQLite geodatabase.
-Układy współrzędnych, w jakich udostępniane są wyniki projektu CORINE zależne są od organu je rozpowszechniającego.
+Układy współrzędnych, w jakich udostępniane są wyniki projektu CORINE, zależne są od organu je rozpowszechniającego.
 Przykładowo, dane obejmujące obszar całej Europy, pozyskane z witryny Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover) wykorzystują układ współrzędnych ETRS-LAEA (EPSG:3035), natomiast dane udostępniane przez Główny Inspektorat Ochrony Środowiska (https://clc.gios.gov.pl/), uwzględniające wyłącznie dane dla terytorium Polski, wykorzystują Państwowy Układ Współrzędnych Geodezyjnych 1992 (EPSG:2180)
 
-Dane inwentaryzacyjne CORINE Land Cover dostępne dla lat 1990, 2000, 2006, 2012 i 2018, zorganizowane są hierarchicznie w trzech poziomach szczegółowości.
-Na pierwszym poziomie wyszczególniono pięć głównych typów pokrycia globu ziemskiego: tereny antropogeniczne, tereny rolne, lasy i ekosystemy seminaturalne, obszary podmokłe oraz obszary wodne. 
+Dane inwentaryzacyjne CORINE Land Cover dostępne dla lat 1990, 2000, 2006, 2012 i 2018, zorganizowane są hierarchicznie na trzech poziomach szczegółowości.
+Na pierwszym poziomie wyszczególniono pięć głównych typów pokrycia terenu: tereny antropogeniczne, tereny rolne, lasy i ekosystemy seminaturalne, obszary podmokłe oraz obszary wodne. 
 Drugi poziom obejmuje 15 form pokrycia terenu, które można przedstawić na mapach w skalach od 1:500 000 do 1:1 000 000.
-Dla trzeciego poziomu danych CLC wyróżnione zostały 44 klasy pokrycia terenu, obejmujące wszystkie formy pokrycia terenu występujące na kontynencie europejskim.
+Dla trzeciego poziomu danych CLC wyróżnione zostały 44 kategorie, obejmujące wszystkie formy pokrycia terenu występujące na kontynencie europejskim.
 
-Do celów tej pracy, użyte zostały dane rastrowe, obejmujące obszar całej Europy, dla lat 1990 i 2018, udostępnione do pobrania na witrynie Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover).
+Do celów tej pracy, użyte zostały dane rastrowe dla lat 1990 i 2018, udostępnione do pobrania na witrynie Copernicus Land Monitoring Service (https://land.copernicus.eu/pan-european/corine-land-cover).
 
 
 ## Dane dodatkowe {#dane_dodatkowe}
 
-W pracy wykorzystane zostały także dane wektorowe dotyczące oficjalnego podziału terytorialnego Polski pozyskane z Państwowego Rejestru Granic (PRG) udostępnionym na Geoportalu (https://www.geoportal.gov.pl/dane/panstwowy-rejestr-granic) oraz dane wektorowe z obszarami mezoregionów, pobrane z witryny Geoserwis (http://geoserwis.gdos.gov.pl/mapy/), prowadzonej przez Generalną Dyrekcje Ochrony Środowiska.
-Wykorzystany podział na mezoregiony jest efektem doprecyzowania i uszczegółowienia granic regionów fizyczno-geograficznych z uwzględnieniem metodyki proponowanej w ostatnim podziale fizyczno-geograficznym Kondrackiego (1998, 2000). 
+W pracy wykorzystane zostały także dane wektorowe dotyczące oficjalnego podziału terytorialnego Polski pozyskane z Państwowego Rejestru Granic (PRG) udostępnionym na Geoportalu (https://www.geoportal.gov.pl/dane/panstwowy-rejestr-granic).
+<!-- oraz dane wektorowe z obszarami mezoregionów, pobrane z witryny Geoserwis (http://geoserwis.gdos.gov.pl/mapy/), prowadzonej przez Generalną Dyrekcje Ochrony Środowiska. -->
+<!-- Wykorzystany podział na mezoregiony jest efektem doprecyzowania i uszczegółowienia granic regionów fizyczno-geograficznych z uwzględnieniem metodyki proponowanej w ostatnim podziale fizyczno-geograficznym Kondrackiego (1998, 2000).  -->
 
 <!-- Physico-geographical mesoregions of Poland: Verification and adjustment of boundaries on the basis of contemporary spatial data, „Geographia Polonica” 2018, vol. 91, iss. 2, s.143-170 -->
 <!-- Umieszczonej pod adresem http://www.geographiapolonica.pl/issue/item/91_2.html -->

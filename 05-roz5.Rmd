@@ -2,11 +2,12 @@
 
 ## Analiza zmian na poziomie krajowym
 
-Jednym z celów tej pracy było sporządzenie map opartych o dane CORINE Land Cover dla lat 1990 i 2018, zreklasyfikowanych do 7 kategorii pokrycia terenu, aby umożliwić ogólną ocenę stanu pokrycia terenu dla tych lat.
+Jednym z celów tej pracy było sporządzenie map opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, aby umożliwić ogólną ocenę stanu pokrycia terenu dla tych lat.
 Mapy te zostały przedstawione poniżej (rycina \@ref(fig:rycina1), rycina \@ref(fig:rycina2)).
-Pomimo zastosowania wyłącznie 7 kategorii, analiza zmian pokrycia terenu w skali całego kraju na podstawie wizualnego porównania tych map byłaby prawdopodobnie równie trudna, co błędna.
-W celu zminimalizowania ilości błędów w analizie zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście typowo statystyczne.
+**Pomimo zastosowania wyłącznie 7 kategorii, analiza zmian pokrycia terenu w skali całego kraju na podstawie wizualnego porównania tych map byłaby prawdopodobnie równie trudna, co błędna. <- do przepisania**
+W celu zminimalizowania liczby błędów w analizie zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście statystyczne.
 
+**dodać cyfry przed nazwami kategorii**
 ```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 po reklasyfikacji", out.width=400}
 knitr::include_graphics("figures/clc90.png")
 ```
@@ -14,8 +15,9 @@ knitr::include_graphics("figures/clc90.png")
 knitr::include_graphics("figures/clc18.png")
 ```
 
-Udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinie \@ref(fig:rycina4) i rycinie \@ref(fig:rycina5).
+Udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinach \@ref(fig:rycina4) i \@ref(fig:rycina5).
 
+**złączyć w jedną rycinę**
 ```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 1990", out.width=400}
 knitr::include_graphics("figures/lcpch90.png")
 ```
@@ -34,7 +36,10 @@ Największe straty odnotowano na terenach rolnych, ich powierzchnia w roku 2018 
 Pomimo największych strat spośród wszystkich analizowanych kategorii, powierzchnia terenów rolnych zmniejszyła się jedynie o 8,7%.
 Ilość terenów z rzadszą roślinnością zwiększyła się w najmniejszym stopniu i jednocześnie tereny te odnotowały najbardziej dynamiczną stratę powierzchni w analizowanym okresie.
 Tereny z rzadszą roślinnością odnotowały najmniejszy przyrost oraz łączną utratę 59,1% powierzchni, co stanowi najbardziej dynamiczną stratę powierzchni w stosunku do stanu z 1990 roku spośród analizowanych kategorii pokrycia terenu.
-Kategorią, która zmieniła się w najmniejszym stopniu były obszary wodne. Całkowita powierzchnia tych terenów wzrosła wyłącznie o 2,3%.
+Kategorią, która zmieniła się w najmniejszym stopniu były obszary wodne.
+Całkowita powierzchnia tych terenów wzrosła wyłącznie o 2,3%.
+Niewielkie powiększenie powierzchni lasów (5.19%) spowodowane było wysokimi ubytkami powierzchni w stosunku do ich przyrostów.
+Ponad 3% powierzchni obszarów leśnych, w roku 2018 zmieniło kategorię pokrycia terenu.
 
 ```{r tabela2, echo=FALSE}
 library(magrittr)
@@ -76,10 +81,11 @@ kbl(lc_changes,
 
 Tabela \@ref(tab:tabela3) przedstawia wynikową tabelę krzyżową, wykonaną w celu oszacowania ilościowych zmian między zreklasyfikowanymi kategoriami pokrycia terenu dla danych rastrowych dla lat 1990 i 2018.
 Kategorie z roku 1990 ułożone są w wierszach tabeli, natomiast w kolumny stanowią kategorie z roku 2018.
-Oznacza to, że np. kolumna tabeli oznaczona kategorią "1" informuje nas o ilości komórek z roku 1990 w których komórki zmieniły się na kolejne kategorie.
-Przecięcia wierszy i kolumn oznaczonych tymi samymi kategoriami informują o ilości komórek rastra, które w analizowanych latach się nie zmieniły.
+Oznacza to, że np. kolumna tabeli oznaczona kategorią "1" informuje nas o liczbie komórek z roku 1990, w których komórki zmieniły się na kolejne kategorie.
+Przecięcia wierszy i kolumn oznaczonych tymi samymi kategoriami informują o liczbie komórek rastra, które w analizowanych latach się nie zmieniły.
 Numeracja kategorii w tabeli odpowiada kolejności kategorii przedstawionej w podrozdziale \@ref(reklasyfikacja).
 
+**dodać kolumne i rząd z latami**
 ```{r tabela3, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
 library(kableExtra)
@@ -116,7 +122,7 @@ kbl(cont_table,
 
 Na podstawie tabeli \@ref(tab:tabela3) opracowana została rycina \@ref(fig:rycina8), przedstawiająca najważniejsze trendy zmian pokrycia terenu w sposób graficzny.
 Kategorie pokrycia terenu zostały podzielone na osobne wykresy, reprezentujące przyrosty kategorii w 2018 roku.
-Kolory wewnątrz wykresów informują o tym jaką część przyrostów powierzchni danej kategorii stanowią komórki, które w roku 1990 należały do pozostałych kategorii.
+Kolory wewnątrz wykresów informują o tym, jaką część przyrostów powierzchni danej kategorii stanowią komórki, które w roku 1990 należały do pozostałych kategorii.
 
 ```{r rycina8, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
 knitr::include_graphics("figures/treemap_faceted.png")
@@ -125,54 +131,50 @@ knitr::include_graphics("figures/treemap_faceted.png")
 Analizując rycinę \@ref(fig:rycina8) można zauważyć pewne tendencje wśród zmian pokrycia terenu.
 Najważniejsze trendy zmian pokrycia terenu, stanowiące największe straty pokrycia terenu w kategorii pierwotnej:
 
-- tereny antropogeniczne -> tereny rolne
-- tereny rolne -> tereny antropogeniczne i obszary leśne
-- obszary leśne -> tereny krzewiaste
-- tereny krzewiaste -> obszary leśne
-- tereny z rzadszą roślinnością -> tereny krzewiaste
-- obszary podmokłe -> tereny rolne i obszary leśne
-- obszary wodne -> tereny rolne i obszary leśne
+- tereny antropogeniczne -> tereny rolne,
+- tereny rolne -> tereny antropogeniczne i obszary leśne,
+- obszary leśne -> tereny krzewiaste,
+- tereny krzewiaste -> obszary leśne,
+- tereny z rzadszą roślinnością -> tereny krzewiaste,
+- obszary podmokłe -> tereny rolne i obszary leśne,
+- obszary wodne -> tereny rolne i obszary leśne.
 
 
 ### Lokalizacje największych zmian w skali krajowej
 
-Lokalizacje komórek rastra, które w okresie 1990-2018 zmieniły kategorie pokrycia terenu przedstawia rycina \@ref(fig:rycina3).
+Lokalizacje komórek rastra, które w okresie 1990-2018 zmieniły kategorie pokrycia terenu, przedstawia rycina \@ref(fig:rycina3).
 Analizując rycinę, zauważyć można występowanie zmian zarówno o charakterze rozproszonym, jak i skoncentrowanym.
-Największą ilość zmian o charakterze rozproszonym zauważyć można w południowej części kraju na obszarze całego województwa śląskiego oraz zachodniej części województwa małopolskiego.
+Największe zmiany o charakterze rozproszonym zauważyć można w południowej części kraju na obszarze całego województwa śląskiego oraz zachodniej części województwa małopolskiego.
 Dużą ilością rozproszonych zmian pokrycia terenu cechują się także województwo mazowieckie, województwo świętokrzyskie, centralna część województwa podkarpackiego oraz zachodnia część województwa dolnośląskiego.
 Znaczna większość zmian na tych obszarach stanowi zmianę z terenów rolnych w tereny antropogeniczne.
 
-Obszary na których zaszły znaczne zmiany pokrycia terenu o charakterze skoncentrowanym wymienione zostały poniżej, wraz z wyjaśnieniem w jakim miejscu znajdują się te obszary, i z jakimi zmianami kategorii są związane.
+Obszary, na których zaszły znaczne zmiany pokrycia terenu o charakterze skoncentrowanym wymienione zostały poniżej, wraz z wyjaśnieniem, w jakim miejscu znajdują się te obszary, i z jakimi zmianami kategorii są związane.
 Duże obszary zmienione w wyniku działalności człowieka:
+**dodać źródła?**
 
-1. Kopalnia Węgla Brunatnego Bełchatów i zwałowisko zewnętrzne Góra Kamieńska, będąca jego skutkiem.
-Lasy i tereny rolne zostały przekształcone w tereny antropogeniczne.
-2. Rezerwat przyrody Jeziorsko
-Obszary wodne powstałe z terenów podmokłych.
-3. Kopalnia Węgla Brunatnego Adamów
-Tereny leśne i rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
-4. Kopalnia Węgla Brunatnego Konin
-Tereny rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
-5. Ośrodek Szkolenia Poligonowego Wojsk Lądowych Żagań
-Różne przejścia między kategoriami, głównie zmiana terenów z rzadszą roślinnością w tereny krzewiaste oraz terenów krzewiastych w tereny zalesione.
-6. Kopalnia Węgla Brunatnego Turów
-Tereny rolne przekształcone głównie w tereny antropogeniczne.
-7. Zalew Siemianówka
-Zmiana terenów podmokłych w obszary wodne oraz zmiana terenów rolnych w tereny podmokłe.
-Skutek spiętrzenia wód w zbiorniku zaporowym.
+1. Kopalnia Węgla Brunatnego Bełchatów i zwałowisko zewnętrzne Góra Kamieńska, będąca jego skutkiem:
+lasy i tereny rolne zostały przekształcone w tereny antropogeniczne.
+2. Rezerwat przyrody Jeziorsko:
+obszary wodne powstałe z terenów podmokłych.
+3. Kopalnia Węgla Brunatnego Adamów:
+tereny leśne i rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
+4. Kopalnia Węgla Brunatnego Konin:
+tereny rolne przekształcone w tereny antropogeniczne, powstanie sztucznego zbiornika wodnego.
+5. Ośrodek Szkolenia Poligonowego Wojsk Lądowych Żagań:
+różne przejścia między kategoriami, głównie zmiana terenów z rzadszą roślinnością w tereny krzewiaste oraz terenów krzewiastych w tereny zalesione.
+6. Kopalnia Węgla Brunatnego Turów:
+tereny rolne przekształcone głównie w tereny antropogeniczne.
+7. Zalew Siemianówka:
+zmiana terenów podmokłych w obszary wodne oraz zmiana terenów rolnych w tereny podmokłe, skutek spiętrzenia wód w zbiorniku zaporowym.
 
 Duże obszary zmienione w wyniku zjawisk naturalnych:
 
-8. Bory Tucholskie
-Zmiana ogromnych ilości terenów leśnych w tereny krzewiaste.
-Konsekwencje wichury i nawałnicy z 2017 roku.
-9. Mazury, nadleśnictwo Pisz
-Przemiana terenów krzewiastych w tereny leśne.
-Skutki trąb powietrznych z 2002 roku oraz działań zapobiegających dalszego zniszczenia lasów poprzez wykonanie licznych pasów przeciwpożarowych.
-10. Kotlina Raciborska, nadleśnictwo Rudy Raciborskie
-Pożar lasu w nadleśnictwie Rudy Raciborskie z 1992 roku.
-Pożar strawił 9062 ha lasów.
-Następnie w roku 2017 zniszczenia lasów spowodowane trąbą powietrzną.
+8. Bory Tucholskie:
+zmiana ogromnych połaci terenów leśnych w tereny krzewiaste, konsekwencje wichury i nawałnicy z 2017 roku.
+9. Mazury, nadleśnictwo Pisz:
+przemiana terenów krzewiastych w tereny leśne, skutki trąb powietrznych z 2002 roku oraz działań zapobiegających dalszego zniszczenia lasów poprzez wykonanie licznych pasów przeciwpożarowych.
+10. Kotlina Raciborska, nadleśnictwo Rudy Raciborskie:
+pożar lasu w nadleśnictwie Rudy Raciborskie z 1992 roku, który strawił 9062 ha lasów, następnie w roku 2017 zniszczenia lasów spowodowane trąbą powietrzną.
 
 ```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji dla lat 1990-2018", out.width=400}
 knitr::include_graphics("figures/lc_bin2.png")
@@ -193,12 +195,12 @@ knitr::include_graphics("figures/treemap_main.png")
 Ocena struktur przestrzennych wykonana została poprzez podział analizowanego obszaru na mniejsze jednostki przestrzenne.
 W celu prawidłowej oceny zmian, obliczenia wykonano dla trzech różnych jednostek przestrzennych: 
 
-- wewnątrz kwadratów o wymiarach 100 na 100 pikseli,
-- na poziomie powiatowym
-- na poziomie mezoregionów.
+- dla regularnych obszarów o wymiarach 100 na 100 pikseli (10 na 10 km),
+- na poziomie powiatowym.
+<!-- - na poziomie mezoregionów. -->
 
 Następnie, ocena zmian struktur przestrzennych wykonana została za pomocą metod opartych o sygnatury przestrzenne.
-Do do określenia stopnia zmian między tymi samymi jednostkami przestrzennymi w analizowanych latach wykorzystano odległość Jensena-Shannona.
+Do określenia stopnia zmian między tymi samymi jednostkami przestrzennymi w analizowanych latach wykorzystano odległość Jensena-Shannona.
 Parametr ten przyjmuje wartości od 0 do 1.
 Wartość 0 oznacza brak zmian w strukturze przestrzennej, natomiast wartość 1 wskazuje na ich całkowitą zmianę. 
 Na podstawie wartości tego parametru, wyodrębnione zostało 6 najbardziej zmienionych obszarów, dla każdego rodzaju wykorzystanych jednostek przestrzennych, w celu przeanalizowania zmian, które zaszły na tych obszarach.
@@ -215,15 +217,11 @@ Podobnie jak na rycinie \@ref(fig:rycina3), duże ilości zmian struktury przest
 Największe zmiany widoczne są na obszarze województw: świętokrzyskiego, małopolskiego, śląskiego oraz dolnośląskiego.
 Najmniejsze zmiany zauważyć można na obszarze morza terytorialnego oraz na południu Polski na terenie Płaskowyżu Głubczyckiego.
 
+<!--
 ```{r rycina12, echo=FALSE, fig.cap="Obszar z największymi zmianami w siatce 10x10km", out.width=400}
 knitr::include_graphics("figures/top1_grid.png")
 ```
-Rycina \@ref(fig:rycina12) przedstawia obszar na którym zaszły największe zmiany między analizowanymi latami.
-Obszar ten swoim zasięgiem obejmuje głównie zachodnią część gminy Czersk, znajdującej się w południowej części województwa pomorskiego.
-Obszar ten został spustoszony przez nawałnicę w 2017 roku.
-Analizując powyższą rycinę, łatwo zauważyć, że latach 1990-2018 ogromna ilość lasów na tym obszarze została zastąpiona przez tereny krzewiaste.
-W północno-wschodniej części tego obszaru widoczna zmiana części obszarów podmokłych, także na rzecz obszarów krzewiastych.
-Jako że nie jest to obszar zamieszkały przez dużą ilość ludzi, nie wystąpiły tu żadne inne znaczące zmiany pokrycia terenu.
+-->
 
 ```{r rycina15, echo=FALSE, fig.cap="6 obszarów z największymi zmianami w siatce 10x10km. A - Zachodnia część gminy Czersk, B - Wschodnia część gminy Lutowiska, granica Polski z Ukrainą, C - Mezoregion Bory Tucholskie, D - Północna część gminy Pisz, E - Centralna część Kopalni Węgla Brunatnego Bełchatów, F - Mezoregion Bory Tucholskie. Obszar przylegający północną krawędzią do obszaru C.", out.width=400}
 knitr::include_graphics("figures/top6_grid.png")
@@ -236,9 +234,14 @@ knitr::include_graphics("figures/top6_grid.png")
 <!-- F - Mezoregion Bory Tucholskie. Obszar przylegający północną krawędzią do obszaru C. -->
 
 Rycina \@ref(fig:rycina15) przedstawia sześć regularnych obszarów 10 na 10 km o największych zmianach pokrycia terenu w latach 1990-2018.
-Wśród zmian na tych obszarach, najbardziej zauważalnym trendem wydaje się być zmiana obszarów leśnych na tereny krzewiaste.
+Wśród zmian na tych obszarach, najbardziej zauważalnym trendem jest zmiana obszarów leśnych na tereny krzewiaste.
 Kolejnym widocznym trendem jest przede wszystkim postępująca antropopresja w postaci rozrostu terenów o charakterze antropogenicznym.
 Proces ten jest szczególnie widoczny na obszarze oznaczonym literą E, który przedstawia centralną część Kopalni Węgla Brunatnego Bełchatów.
+Literą A oznaczony został obszar, na którym zaszły największe zmiany między analizowanymi latami.
+Obszar ten swoim zasięgiem obejmuje głównie zachodnią część gminy Czersk, znajdującej się w południowej części województwa pomorskiego.
+Obszar ten został spustoszony przez nawałnicę w 2017 roku.
+Analizując powyższą rycinę, łatwo zauważyć, że latach 1990-2018 ogromna ilość lasów na tym obszarze została zastąpiona przez tereny krzewiaste.
+W północno-wschodniej części tego obszaru widoczna jest zmiana części obszarów podmokłych, także na rzecz obszarów krzewiastych.
 Interesujacym przykładem jest obszar B, obejmujący granicę Polski z Ukrainą we wschodniej części gminy Lutowiska.
 Na tym obszarze nastąpiła prawie całkowita przemiana terenów krzewiastych w tereny rolne, co jest pewnym przełamaniem głównego trendu widocznego na pozostałych pięciu obszarach.
 
@@ -246,7 +249,7 @@ Na tym obszarze nastąpiła prawie całkowita przemiana terenów krzewiastych w 
 knitr::include_graphics("figures/hist_grid.png")
 ```
 
-Określenie ilości obszarów o określonym stopniu zmian pokrycia terenu umożliwia sporządzony histogram widoczny na rycinie \@ref(fig:rycina18)
+Określenie udziału obszarów o określonym stopniu zmian pokrycia terenu umożliwia sporządzony histogram widoczny na rycinie \@ref(fig:rycina18).
 Prawoskośny rozkład histogramu, z dominantą będącą wartością 0 odległości Jensena-Shannona oznacza, że w znacznej większości regularnych obszarów 10 na 10km nie zaszły żadne zmiany, lub były one bardzo niewielkie.
 Obszary o największych zmianach przedstawione na rycinie \@ref(fig:rycina15) stanowią na tym histogramie wartości ekstremalne.
 
@@ -255,15 +258,19 @@ Obszary o największych zmianach przedstawione na rycinie \@ref(fig:rycina15) st
 ```{r rycina10, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla powiatów", out.width=400}
 knitr::include_graphics("figures/map_dist.png")
 ```
-Wśród powiatów (\@ref(fig:rycina10)), najwyższe wartości odległości Jensena-Shannona zauważalne są w tych samych lokalizacjach, co dla regularnych obszarów 10 na 10 km.
-Poza tymi obszarami, wysokie wartości parametru osiągnęło także duża część miast na prawach powiatu.
+Wśród powiatów (Rycina \@ref(fig:rycina10)), najwyższe wartości odległości Jensena-Shannona zauważalne są w tych samych lokalizacjach, co dla regularnych obszarów 10 na 10 km.
+Poza tymi obszarami, wysokie wartości parametru osiągnęła także duża część miast na prawach powiatu.
 
+<!--
 ```{r rycina13, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród powiatów", out.width=400}
 knitr::include_graphics("figures/top1_dist.png")
 ```
+-->
+
 ```{r rycina16, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród powiatów", out.width=400}
 knitr::include_graphics("figures/top6_dist.png")
 ```
+
 ```{r rycina19, echo=FALSE, fig.cap="Histogram dla powiatów", out.width=400}
 knitr::include_graphics("figures/hist_dist.png")
 ```
@@ -284,3 +291,9 @@ knitr::include_graphics("figures/top6_meso.png")
 knitr::include_graphics("figures/hist_meso.png")
 ```
 -->
+
+### Porównanie z wynikami innych badań
+***Musi się Pan gdzieś pod koniec pracy (najlepiej przed Podsumowaniem) odnieść do innych podobnych badań (może być tych polskich do 2012 i np. tych moich globalnych( -- co Panu wszyszło podobnego, co innego, etc.***
+
+
+
