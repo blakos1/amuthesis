@@ -1,10 +1,17 @@
 # Materiały {#materialy}
 
 ## Obszar badań {#obszar_badan}
-
-Obszar badań obejmuje terytorium Polski, włącznie z obszarem morskich wód wewnętrznych i morzem terytorialnym.
-
 <!-- opisać trochę charakterystykę polski pod względem geograficznym -->
+<!-- obszar badań - zasięg, powierzchnia itp trochę geografii ;_; topografia, klimat i urbanizacja -->
+Obszar badań obejmuje terytorium Polski, włącznie z obszarem morskich wód wewnętrznych i morzem terytorialnym.
+Oficjalna powierzchnia całego państwa wynosi 32271900 ha (źródło: Rocznik statystyczny RP, 2021).
+Ze względu na wykorzystanie w pracy danych rastrowych, rzeczywista powierzchnia objęta analizą wynosi 32272074 ha.
+96,7% tej powierzchni obejmują obszary lądowe, włącznie z wodami śródlądowymi.
+Pozostałą część powierzchni stanowi obszar morskich wód wewnętrznych oraz morza terytorialnego.
+
+Ukształtowanie terenu Polski ułożone jest równoleżnikowo.
+Obszary położone na północy i w centrum stanowią niziny, natomiast wyżyny i tereny górskie na południu.
+Większość powierzchni stanowią tereny nizinne, stanowiące około 75% powierzchni kraju.
 
 
 ## Dane CORINE Land Cover {#clc}

@@ -1,18 +1,26 @@
 ## Streszczenie {-}
 
-<!--
-Streszczenie powinno przedstawiać skrótowo główny problem pracy i jego rozwiązanie.
-Możliwa struktura streszczenia to: (1) 1-3 zdania wstępu do problemu (czym się zajmujemy, dlaczego jest to ważne, jakie są problemy/luki do wypełnienia), (2) 1 zdanie opisujące cel pracy, (3) 1-3 zdania przedstawiające użyte materiały (dane) i metody (techniki, narzędzia), (4) 1-3 zdania obrazujące główne wyniki pracy, (5) 1-2 zdania podsumowujące; możliwe jest też określenie dalszych kroków/planów.
--->
-<!-- Słowa kluczowe: (4-6 słów/zwrotów opisujących treść pracy, które nie wystąpiły w tytule) -->
+<!-- (1) 1-3 zdania wstępu do problemu (czym się zajmujemy, dlaczego jest to ważne, jakie są problemy/luki do wypełnienia) -->
+Ocena dynamiki zmian pokrycia terenu ma ważne znaczenie dla skutecznego planowania i zarządzania zasobami.
+W wyniku programów monitorowania zmian pokrycia terenu powstają liczne zbiory danych umożliwiające wykonanie takich analiz nawet w skali globalnej.
+Większość analiz zmian pokrycia terenu wykonanych w przeszłości, skupiała się wyłącznie na aspektach ilości i lokalizacji zachodzących zmian.
+<!-- (2) 1 zdanie opisujące cel pracy -->
+Celem tej pracy było określenie zmian ilościowych oraz charakteru przestrzennego głównych zmian pokrycia terenu na obszarze Polski w latach 1990-2018 dodatkowo rozszerzając metody analiz przestrzennych o analizy struktur przestrzennych.
+<!-- (3) 1-3 zdania przedstawiające użyte materiały (dane) i metody (techniki, narzędzia), -->
+Do pracy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu CORINE Land Cover (CLC).
+Zmiany ilościowe zostały obliczone wykorzystując kalkulacje oparte na algebrze rastrów.
+Analiza przestrzennego charakteru zmian pokrycia terenu wykonana została w oparciu o metody wykorzystujące obliczenia sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
+<!-- (4) 1-3 zdania obrazujące główne wyniki pracy -->
+Wynikiem pracy są informacje o najważniejszych kierunkach zmian pokrycia terenu, który zaszły na obszarze Polski w latach 1990-2018.
 
-Słowa kluczowe: struktura przestrzenna, pokrycie terenu, CORINE Land Cover, CLC
+<!-- Słowa kluczowe: (4-6 słów/zwrotów opisujących treść pracy, które nie wystąpiły w tytule) -->
+Słowa kluczowe: struktura przestrzenna, sygnatury przestrzenne, pokrycie terenu, CORINE Land Cover, CLC
 
 ## Abstract {-}
 
-<!-- The abstract must be consistent with the above text. -->
+Przetłumaczę jak już będę miał streszczenie skończone na 100%.
 
-Keywords: spatial patterns, land cover, CORINE Land Cover, CLC
+Keywords: spatial patterns, spatial signatures, land cover, CORINE Land Cover, CLC
 
 \newpage
 

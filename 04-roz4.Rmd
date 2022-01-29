@@ -12,50 +12,18 @@ Aby uniknąć powyższej sytuacji, klasy zostały zgrupowane do oryginalnego pod
 W wyniku reklasyfikacji ilość klas pokrycia terenu została zmniejszona z 33 klas poziomu trzeciego występujących na obszarze Polski do 7.
 Otrzymano następujące kategorie pokrycia terenu:
 
-- tereny antropogeniczne,
-- tereny rolne,
-- lasy,
-- tereny krzewiaste,
-- tereny z rzadszą roślinnością,
-- obszary podmokłe,
-- obszary wodne.
+1. tereny antropogeniczne,
+2. tereny rolne,
+3. lasy,
+4. tereny krzewiaste,
+5. tereny z rzadszą roślinnością,
+6. obszary podmokłe,
+7. obszary wodne.
 
 ```{r rycina41, echo=FALSE, fig.cap="Porównanie danych CLC dla obszaru miasta Poznań przed i po reklasyfikacji", out.width=400}
 knitr::include_graphics("figures/clc_diff2.png")
 ```
 
-**wkleić raster contingency table "Tabela 3. Kierunki zmian użytkowania ziemi w Polsce w latach 1930–2000"**
-<!--
-```{r tabela1, echo=FALSE}
-library(magrittr)
-library(readr)
-library(kableExtra)
-
-clc_legend = read.csv2("data/clc_legend.csv", header = FALSE, encoding = "UTF-8")
-clc_legend = clc_legend[2:nrow(clc_legend), ]
-rownames(clc_legend) = NULL
-colnames(clc_legend) = c("Poziom pierwszy", "Poziom drugi", "Poziom trzeci")
-
-# clc_legend[1,1] <- cell_spec(clc_legend[[1,1]], format = "latex", bold = T)
-# clc_legend[2,1] <- cell_spec(clc_legend[[2,1]], format = "latex", bold = T)
-
-# kbl(clc_legend, align = "l") %>%
-#   kable_paper(full_width = F) %>%
-#   # column_spec(1, bold = T) %>%
-#   collapse_rows(columns = 1:2, valign = "middle")
-
-kbl(clc_legend, align = "l", booktabs = TRUE, longtable = FALSE) %>%
-  kable_paper(full_width = TRUE) %>%
-  column_spec(1:3, width = "15em") %>%
-  kable_styling(font_size = 7) %>% 
-  collapse_rows(columns = 1:2)
-```
--->
-<!--
-```{r rycina43, echo=FALSE, fig.cap="Kategorie pokrycia terenu wyróżnione w bazie danych CORINE Land Cover."}
-knitr::include_graphics("figures/CLC_legend_PL.pdf")
-```
--->
 
 ## Wykorzystane oprogramowanie {#oprogramowanie}
 
@@ -152,7 +120,7 @@ W wyniku przygotowania danych, otrzymane zostały rastry kategoryczne CLC dla la
 Kolejny etap polegał na  wykonaniu ilościowej analizy zmian pokrycia terenu dla całego analizowanego obszaru.
 W pierwszej kolejności (krok 3 na diagramie) obliczona została tabela częstotliwości występowania zreklasyfikowanych kategorii CLC w poszczególnych latach.
 Tabela ta zawiera informacje o ilości komórek danej kategorii występujących na rastrze dla danego roku.
-Następnie, obliczona została tabela krzyżowa (**użyć tego czy "tablica kontyngencji" - contingency table?**) zmian zreklasyfikowanych kategorii między analizowanymi latami.
+Następnie, obliczona została tabela krzyżowa (**użyć tego czy "tablica kontyngencji" - contingency table?**) zmian zreklasyfikowanych kategorii między analizowanymi latami (Tabela \@ref(tab:tabela3)).
 Otrzymana tabela krzyżowa zawiera dane o wszystkich zmianach pokrycia terenu zaszłych między każdą możliwą parą kategorii pokrycia terenu.
 Ostatecznie, stworzona została tabela \@ref(tab:tabela2) zawierająca podstawowe statystyki podsumowujące zmiany zaszłe na obszarze Polski w podziale na zreklasyfikowane kategorie pokrycia terenu.
 
@@ -175,7 +143,7 @@ W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przest
 - na poziomie powiatowym
 - na poziomie mezoregionów.
 
-Pojedynczy obszar powstały poprzez wyodrębnienie kwadratów o wymiarach 100 na 100 pikseli obejmuje powierzchnię 100 km^2^.
+Pojedynczy obszar powstały poprzez wyodrębnienie kwadratów o wymiarach 100 na 100 pikseli obejmuje powierzchnię 10000 ha (100 km^2^).
 
 Do ilościowej oceny wielkości zmian każdej jednostki wykorzystuje się miary niepodobieństwa (**odmienności?**).
 W tej pracy, do określenia stopnia zmian wykorzystano odległość Jensena-Shannona obliczoną dla każdej jednostki przestrzennej.
