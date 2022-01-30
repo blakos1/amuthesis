@@ -34,10 +34,10 @@ Jedną z najbardziej podstawowych sygnatur przestrzennych jest kompozycja.
 Stanowi ona podsumowanie liczby komórek danej kategorii występujących na analizowanym obszarze.
 Obok kompozycji wyróżnia się także konfigurację, która stanowi opis liczby komórek danych kategorii występujących w sąsiedztwie komórek innych kategorii.
 
-**dodać cytowania**
-Wyróżnia się także metody opisu struktur przestrzennych będące połączeniem wcześniej wspomnianych sygnatur.
+<!-- **dodać cytowania -->
+Wyróżnia się także metody opisu struktur przestrzennych będące połączeniem wcześniej wspomnianych sygnatur [@nowosad_motif].
 Jedną z nich jest, między innymi, macierz współwystępowania, którą tworzy się poprzez zliczenie wszystkich par sąsiadujących ze sobą komórek.
-W wyniku otrzymywana jest macierz o wymiarach k na k, gdzie k jest równe liczbie klas występujących w rastrze kategoryzowanym.
+W wyniku otrzymywana jest macierz o wymiarach k na k, gdzie k jest równe liczbie klas występujących w rastrze kategoryzowanym [@Jasiewicz_GeoPAT].
 Wewnątrz macierzy współwystępowania, wartości przekątne związane są z kompozycją rastra, natomiast wartości pionowe i poziome - z jego konfiguracją.
 Sygnaturą wykorzystaną do obliczeń w tej pracy był histogram współwystępowania, będący przekształceniem macierzy współwystępowania do postaci jednowymiarowej.
 
@@ -89,7 +89,7 @@ knitr::knit_hooks$set(output = function(x, options) {
 })
 ```
 
-```{r,warning=FALSE, message=FALSE, out.lines=4}
+```{r,warning=FALSE, message=FALSE, out.lines=7}
 library(motif)
 library(stars)
 
@@ -117,13 +117,12 @@ coma$signature[[24]]
 ```
 
 
-## Przygotowanie danych do analizy struktury przestrzennej {#analiza}
+## Przygotowanie danych do analizy {#analiza}
 <!-- W tej części można dodać jakiś diagram pokazujący kolejne kroki analizy. Trzeba też dokładniej te kroki opisać (proszę postawić się w miejscu osoby, która chciałaby zrobić to samo co Pan, ale dla innego kraju) -->
-Rycina \@ref(fig:rycina42) przedstawia poszczególne kroki wykonane w celu pozyskania wyników umożliwiających dalszą analizę struktur przestrzennych na wyodrębnionych obszarach.
+Poszczególne kroki wykonane w celu pozyskania wyników umożliwiających dalszą analizę struktur przestrzennych na wyodrębnionych obszarach zostały przedstawione na rycinie \@ref(fig:rycina42).
 Podany przykład jest wyłącznie uproszczeniem czynności wykonanych w rzeczywistości, ponieważ w sekcji "Analiza zmian pokrycia terenu" zawarty został wyłącznie proces pozyskania danych wyjściowych do analizy struktur przestrzennych na poziomie powiatów.
 
-**POWIĘKSZYĆ RYCINĘ, ZMIENIĆ PODPIS**
-```{r rycina42, echo=FALSE, fig.cap="Czynności wykonane w celu otrzymania wyników umożliwiających analizę struktury przestrzennej obszarów powiatów.", out.width=400}
+```{r rycina42, echo=FALSE, fig.cap="Schemat procesu przygotowania danych do analizy", out.width=400}
 knitr::include_graphics("figures/workflow.pdf")
 ```
 
@@ -161,18 +160,10 @@ Zmiana +50% oznacza, że powierzchnia z roku 2018 stanowi 150% powierzchni z rok
 Analogicznie zmiana -50% oznacza, że powierzchnia z roku 2018 stanowi 50% powierzchni z roku 1990.
 
 <!-- analiza zmian struktur przestrzennych -->
-**Celem trzeciego etapu było pozyskanie obliczonych różnic w stanie struktur przestrzennych jednostek przestrzennych. <-przepisać**
-W celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przestrzennej, dane zostały przeanalizowane na dwóch poziomach:
-
-- dla regularnych obszarów o wymiarach 100 na 100 pikseli (10 na 10 km),
-- na poziomie powiatowym.
-<!-- - na poziomie mezoregionów. -->
-
-Pojedynczy obszar powstały poprzez wyodrębnienie kwadratów o wymiarach 100 na 100 pikseli obejmuje powierzchnię 10000 ha (100 km^2^).
-
-Do ilościowej oceny wielkości zmian każdej jednostki wykorzystuje się miary niepodobieństwa.
-W tej pracy, do określenia stopnia zmian wykorzystano odległość Jensena-Shannona obliczoną dla każdej jednostki przestrzennej.
-Miara ta przyjmuje wartości od 0 do 1.
+Do ilościowej oceny wielkości zmian struktur przestrzennych wykorzystuje się miary niepodobieństwa [@cha_2007].
+W tej pracy, do określenia stopnia tych zmian wykorzystano odległość Jensena-Shannona obliczoną dla regularnych obszarów o wymiarach 100 na 100 pikseli (10 na 10 km) oraz na poziomie powiatowym.
+Dane zostały przeanalizowane na dwóch poziomach, w celu trafnego stwierdzenia prawidłowości dotyczących zmian struktury przestrzennej.
+Odległość Jensena-Shannona przyjmuje wartości od 0 do 1.
 Wartość 0 oznacza, że na danym obszarze między badanymi okresami nie zaszły żadne zmiany, natomiast wartość 1 oznacza brak podobieństw między analizowanymi obszarami, czyli całkowitą zmianę pokrycia terenu.
 
 Ostatnim krokiem etapu oceny zmian struktur przestrzennych było znalezienie obszarów, które w latach 1990-2018 zmieniły się najbardziej.

@@ -39,4 +39,4 @@ Takie podejście do analizy przestrzennej umożliwia między innymi ocenę zmian
 <!-- 5.Cel -->
 Głównym celem tej pracy jest analiza ogólnego charakteru oraz przestrzennego rozmieszczenia głównych zmian pokrycia terenu na obszarze Polski w latach 1990-2018.
 Poza ogólnymi zmianami ilościowymi obliczonymi dla całego analizowanego obszaru, w pracy uwzględniono także analizy struktur przestrzennych na podstawie obliczeń sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
-Dodatkowym celem było znalezienie i graficzna reprezentacja najbardziej zmienionych obszarów w przeciągu ostatnich 28 lat oraz sporządzenie map opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, umożliwiających ogólną ocenę stanu pokrycia terenu dla tych lat.
+Dodatkowym celem było znalezienie i graficzna reprezentacja najbardziej zmienionych obszarów w przeciągu ostatnich 28 lat oraz sporządzenie map pokrycia terenu Polski, opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, umożliwiających ogólną ocenę stanu pokrycia terenu dla tych lat.

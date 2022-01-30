@@ -15,14 +15,9 @@ Pozostałą część powierzchni stanowi obszar morskich wód wewnętrznych oraz
 ## Dane CORINE Land Cover {#clc}
 <!-- Więcej o danych -- jak zostały stworzone, w oparciu o co, jaka jest ich dokładność, dla jakich lat i w jakiej rozdzielczości są dostępne, ile wyróżniają kategorii, itd... -->
 
-Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu - CORINE Land Cover (CLC).
-Program CORINE (Coordination of Information on Environment) został przyjęty w 1985 roku przez Komisję Europejską.
-Jego celami było:
-
-(źródło: https://clc.gios.gov.pl).
-- zgromadzenie informacji o stanie środowiska geograficznego w zakresie priorytetowych tematów dla wszystkich krajów Wspólnoty,
-- skoordynowanie wysiłków w zakresie gromadzenia danych i organizacji informacji na szczeblu krajów członkowskich i na szczeblu międzynarodowym,
-- zagwarantowanie spójności informacji i zapewnienie kompatybilności danych
+Do analizy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu CORINE Land Cover (CLC).
+Program CORINE (Coordination of Information on Environment) został przyjęty w 1985 roku przez Komisję Wspólnot Europejskich.
+Jego celem było skoordynowanie przedsięwzięć w zakresie gromadzenia i przetwarzania informacji o stanie środowiska geograficznego w krajach Wspólnoty Europejskiej oraz ich standaryzację w celu umożliwienia wymiany informacji między krajami członkowskimi [@Bielecka_Ciolkosz_2004].
 
 W większości państw CLC jest tworzony poprzez wizualną interpretację obrazów satelitarnych o wysokiej rozdzielczości.
 W kilku państwach stosuje się różne rozwiązania półautomatyczne, wykorzystujące między innymi przetwarzanie obrazów satelitarnych, GIS i generalizację danych.

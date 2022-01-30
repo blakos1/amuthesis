@@ -2,26 +2,18 @@
 
 ## Analiza zmian na poziomie krajowym
 
-Jednym z celów tej pracy było sporządzenie map opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, aby umożliwić ogólną ocenę stanu pokrycia terenu dla tych lat.
-Mapy te zostały przedstawione poniżej (rycina \@ref(fig:rycina1), rycina \@ref(fig:rycina2)).
-**Pomimo zastosowania wyłącznie 7 kategorii, analiza zmian pokrycia terenu w skali całego kraju na podstawie wizualnego porównania tych map byłaby prawdopodobnie równie trudna, co błędna. <- do przepisania**
-W celu zminimalizowania liczby błędów w analizie zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście statystyczne.
+Jednym z celów tej pracy było sporządzenie map pokrycia terenu Polski, opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, aby umożliwić ogólną ocenę stanu pokrycia terenu dla tych lat.
+Mapy te zostały przedstawione poniżej (rycina \@ref(fig:rycina1)).
+<!-- Pomimo zastosowania wyłącznie 7 kategorii, analiza zmian pokrycia terenu w skali całego kraju na podstawie wizualnego porównania tych map byłaby prawdopodobnie równie trudna, co błędna. <- do przepisania -->
+Dodatkowo, udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinie \@ref(fig:rycina4).
+W celu oceny zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście statystyczne.
 
-**dodać cyfry przed nazwami kategorii**
-```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 po reklasyfikacji", out.width=400}
-knitr::include_graphics("figures/clc90.png")
-```
-```{r rycina2, echo=FALSE, fig.cap="Corine Land Cover 2018 po reklasyfikacji", out.width=400}
-knitr::include_graphics("figures/clc18.png")
+```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 i 2018 po reklasyfikacji", out.width=400}
+knitr::include_graphics("figures/clc_stacked.png")
 ```
 
-Udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinach \@ref(fig:rycina4) i \@ref(fig:rycina5).
-
-**złączyć w jedną rycinę**
-```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 1990", out.width=400}
+```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla lat 1990 i 2018", out.width=400}
 knitr::include_graphics("figures/lcpch90.png")
-```
-```{r rycina5, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla roku 2018", out.width=400}
 knitr::include_graphics("figures/lcpch18.png")
 ```
 
@@ -192,30 +184,25 @@ knitr::include_graphics("figures/treemap_main.png")
 
 ## Analiza zmian struktur przestrzennych dla wyodrębnionych jednostek przestrzennych
 <!-- Te podsekcje powinny się zaczynać od jednego akapitu przypominającego czytelnikom co tutaj zostało zrobione. Dopiero po tym "wstępie" można opisywać zmiany -- od tych najbardziej ogólnych do szczegółowych -->
-Ocena struktur przestrzennych wykonana została poprzez podział analizowanego obszaru na mniejsze jednostki przestrzenne.
-W celu prawidłowej oceny zmian, obliczenia wykonano dla trzech różnych jednostek przestrzennych: 
 
-- dla regularnych obszarów o wymiarach 100 na 100 pikseli (10 na 10 km),
-- na poziomie powiatowym.
-<!-- - na poziomie mezoregionów. -->
-
-Następnie, ocena zmian struktur przestrzennych wykonana została za pomocą metod opartych o sygnatury przestrzenne.
-Do określenia stopnia zmian między tymi samymi jednostkami przestrzennymi w analizowanych latach wykorzystano odległość Jensena-Shannona.
-Parametr ten przyjmuje wartości od 0 do 1.
+Ocena zmian struktur przestrzennych wykonana została za pomocą metod opartych o obliczenia miar niepodobieństwa dla sygnatur przestrzennych.
+Miarą wykorzystaną w tej pracy była odległość Jensena-Shannona.
+Parametr ten został obliczony dla regularnych obszarów o wymiarach 100 na 100 pikseli (10 na 10 km) oraz na poziomie powiatowym.
+Odległość Jensena-Shannona przyjmuje wartości od 0 do 1.
 Wartość 0 oznacza brak zmian w strukturze przestrzennej, natomiast wartość 1 wskazuje na ich całkowitą zmianę. 
-Na podstawie wartości tego parametru, wyodrębnione zostało 6 najbardziej zmienionych obszarów, dla każdego rodzaju wykorzystanych jednostek przestrzennych, w celu przeanalizowania zmian, które zaszły na tych obszarach.
+Na podstawie obliczonych wartości tego parametru, wyodrębnione zostało 6 najbardziej zmienionych obszarów, dla każdego rodzaju wykorzystanych jednostek przestrzennych, w celu przeanalizowania zmian, które zaszły na tych obszarach.
 
 
 ### Analiza zmian regularnych obszarów 10 na 10 km
-```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
-knitr::include_graphics("figures/map_grid.png")
-```
-
 
 Wartości obliczonych odległości Jensena-Shannona dla kwadratów 10 na 10 km przedstawione zostały na rycinie \@ref(fig:rycina9).
 Podobnie jak na rycinie \@ref(fig:rycina3), duże ilości zmian struktury przestrzennej widoczne są głównie w południowej części kraju. 
 Największe zmiany widoczne są na obszarze województw: świętokrzyskiego, małopolskiego, śląskiego oraz dolnośląskiego.
 Najmniejsze zmiany zauważyć można na obszarze morza terytorialnego oraz na południu Polski na terenie Płaskowyżu Głubczyckiego.
+
+```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
+knitr::include_graphics("figures/map_grid.png")
+```
 
 <!--
 ```{r rycina12, echo=FALSE, fig.cap="Obszar z największymi zmianami w siatce 10x10km", out.width=400}
@@ -223,7 +210,7 @@ knitr::include_graphics("figures/top1_grid.png")
 ```
 -->
 
-```{r rycina15, echo=FALSE, fig.cap="6 obszarów z największymi zmianami w siatce 10x10km. A - Zachodnia część gminy Czersk, B - Wschodnia część gminy Lutowiska, granica Polski z Ukrainą, C - Mezoregion Bory Tucholskie, D - Północna część gminy Pisz, E - Centralna część Kopalni Węgla Brunatnego Bełchatów, F - Mezoregion Bory Tucholskie. Obszar przylegający północną krawędzią do obszaru C.", out.width=400}
+```{r rycina15, echo=FALSE, fig.cap="6 obszarów z największymi zmianami w siatce 10x10km. A - Zachodnia część gminy Czersk, B - Wschodnia część gminy Lutowiska, granica Polski z Ukrainą, C - Mezoregion Bory Tucholskie, D - Północna część gminy Pisz, E - Centralna część Kopalni Węgla Brunatnego Bełchatów, F - Mezoregion Bory Tucholskie, obszar przylegający północną krawędzią do obszaru C", out.width=400}
 knitr::include_graphics("figures/top6_grid.png")
 ```
 <!-- A - Zachodnia część gminy Czersk, -->
@@ -239,27 +226,28 @@ Kolejnym widocznym trendem jest przede wszystkim postępująca antropopresja w p
 Proces ten jest szczególnie widoczny na obszarze oznaczonym literą E, który przedstawia centralną część Kopalni Węgla Brunatnego Bełchatów.
 Literą A oznaczony został obszar, na którym zaszły największe zmiany między analizowanymi latami.
 Obszar ten swoim zasięgiem obejmuje głównie zachodnią część gminy Czersk, znajdującej się w południowej części województwa pomorskiego.
-Obszar ten został spustoszony przez nawałnicę w 2017 roku.
-Analizując powyższą rycinę, łatwo zauważyć, że latach 1990-2018 ogromna ilość lasów na tym obszarze została zastąpiona przez tereny krzewiaste.
+Analizując mapę tego obszaru, łatwo zauważyć, że latach 1990-2018 ogromna ilość lasów na tym obszarze została zastąpiona przez tereny krzewiaste.
+Prawdopodobnie są to skutki nawałnicy, która w 2017 roku spustoszyła lasy w tym regionie.
 W północno-wschodniej części tego obszaru widoczna jest zmiana części obszarów podmokłych, także na rzecz obszarów krzewiastych.
-Interesujacym przykładem jest obszar B, obejmujący granicę Polski z Ukrainą we wschodniej części gminy Lutowiska.
+Interesującym przykładem jest obszar B, obejmujący granicę Polski z Ukrainą we wschodniej części gminy Lutowiska.
 Na tym obszarze nastąpiła prawie całkowita przemiana terenów krzewiastych w tereny rolne, co jest pewnym przełamaniem głównego trendu widocznego na pozostałych pięciu obszarach.
 
-```{r rycina18, echo=FALSE, fig.cap="Histogram dla siatki 10x10km", out.width=400}
+```{r rycina18, echo=FALSE, fig.cap="Histogram dla regularnych obszarów 10 na 10 km", out.width=400}
 knitr::include_graphics("figures/hist_grid.png")
 ```
 
 Określenie udziału obszarów o określonym stopniu zmian pokrycia terenu umożliwia sporządzony histogram widoczny na rycinie \@ref(fig:rycina18).
-Prawoskośny rozkład histogramu, z dominantą będącą wartością 0 odległości Jensena-Shannona oznacza, że w znacznej większości regularnych obszarów 10 na 10km nie zaszły żadne zmiany, lub były one bardzo niewielkie.
+Prawoskośny rozkład histogramu, z dominantą będącą wartością 0 odległości Jensena-Shannona oznacza, że w znacznej większości regularnych obszarów 10 na 10 km nie zaszły żadne zmiany, lub były one bardzo niewielkie.
 Obszary o największych zmianach przedstawione na rycinie \@ref(fig:rycina15) stanowią na tym histogramie wartości ekstremalne.
 
 ### Analiza zmian na poziomie powiatów
 
+Wśród powiatów (Rycina \@ref(fig:rycina10)), najwyższe wartości odległości Jensena-Shannona zauważalne są w tych samych lokalizacjach, co dla regularnych obszarów 10 na 10 km.
+Poza tymi obszarami wysokie wartości parametru osiągnęła także duża część miast na prawach powiatu.
+Najwyższa wartości odległości Jensena-Shannona wśród powiatów jest także znacznie niższa w porównaniu z najwyższą wartością wśród regularnych obszarów 10 na 10 km, co wskazuje na punktową charakterystykę największych zmian pokrycia terenu.
 ```{r rycina10, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla powiatów", out.width=400}
 knitr::include_graphics("figures/map_dist.png")
 ```
-Wśród powiatów (Rycina \@ref(fig:rycina10)), najwyższe wartości odległości Jensena-Shannona zauważalne są w tych samych lokalizacjach, co dla regularnych obszarów 10 na 10 km.
-Poza tymi obszarami, wysokie wartości parametru osiągnęła także duża część miast na prawach powiatu.
 
 <!--
 ```{r rycina13, echo=FALSE, fig.cap="Obszar z największymi zmianami wśród powiatów", out.width=400}
@@ -267,13 +255,32 @@ knitr::include_graphics("figures/top1_dist.png")
 ```
 -->
 
-```{r rycina16, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród powiatów", out.width=400}
+```{r rycina16, echo=FALSE, fig.cap="6 obszarów z największymi zmianami wśród powiatów. A - powiat Bielsko-Biała, B - powiat Mysłowice, C - powiat Legnica, D - powiat Elbląg, E - powiat Piotrków Trybunalski, F - powiat ostrowiecki", out.width=400}
 knitr::include_graphics("figures/top6_dist.png")
 ```
+<!-- A - powiat Bielsko-Biała, -->
+<!-- B - powiat Mysłowice, -->
+<!-- C - powiat Legnica, -->
+<!-- D - powiat Elbląg, -->
+<!-- E - powiat Piotrków Trybunalski, -->
+<!-- F - powiat ostrowiecki -->
+Sześć powiatów, na których zaszły największe zmiany pokrycia terenu, przedstawione zostało na rycinie \@ref(fig:rycina16).
+Aż 5 z nich stanowią miasta na prawach powiatu.
+Największe zmiany pokrycia terenu spośród wszystkich powiatów zaszły w powiecie Bielsko-Biała oznaczonym jako obszar A.
+Największą zmianą na tym obszarze, podobnie jak i wśród pięciu pozostałych, było przekształcenie terenów rolnych w tereny antropogeniczne.
+Należy zauważyć, że większość z tych terenów położone było w pobliżu wcześniej istniejących terenów antropogenicznych, co wskazuje na dynamicznie zachodzący proces suburbanizacji.
+W południowej części powiatu Mysłowice (obszar B) zauważyć można niewielką zmianę terenów krzewiastych i terenów o rzadszej roślinności w obszary leśne oraz przekształcenie obszaru wodnego znacznej wielkości w tereny antropogeniczne i tereny rolne.
+W powiatach Legnica i Elbląg (obszary C i D) zauważyć można transformację części terenów rolnych w tereny krzewiaste, natomiast w powiecie ostrowieckim (obszar F) - przemianę lasów w tereny krzewiaste.
+<!-- W latach 1995-2018 liczba ludności w każdym z tych obszarów zmniejszyła się. -->
 
 ```{r rycina19, echo=FALSE, fig.cap="Histogram dla powiatów", out.width=400}
 knitr::include_graphics("figures/hist_dist.png")
 ```
+
+Histogram rozkładu odległości Jensena Shannona na poziomie powiatowym (Rycina \@ref(fig:rycina19) znacznie różni się od histogramu dla regularnych obszarów 10 na 10 km.
+Najważniejszą różnicą, jest przede wszystkim, zauważalnie mniejsze przesunięcie histogramu w stronę wartości 0.
+Spowodowane jest to najpewniej różnicą w szerokości przedziałów.
+Rozkład histogramu nadal ma charakter prawoskośny, jednakże dominanta w okolicach wartości 0,005 odległości Jensena Shannona wskazuje na to, że na obszarze większości powiatów zaszły niewielkie zmiany pokrycia terenu.
 
 <!--
 ### Analiza zmian na poziomie mezoregionów
@@ -293,7 +300,8 @@ knitr::include_graphics("figures/hist_meso.png")
 -->
 
 ### Porównanie z wynikami innych badań
-***Musi się Pan gdzieś pod koniec pracy (najlepiej przed Podsumowaniem) odnieść do innych podobnych badań (może być tych polskich do 2012 i np. tych moich globalnych( -- co Panu wszyszło podobnego, co innego, etc.***
+<!-- Musi się Pan gdzieś pod koniec pracy (najlepiej przed Podsumowaniem) odnieść do innych podobnych badań (może być tych polskich do 2012 i np. tych moich globalnych( -- co Panu wszyszło podobnego, co innego, etc. -->
 
-
-
+Podobnie jak w publikacjach @Ciolkosz_Polawski_2006, @Mierzwiak_Całka_2019 i @NOWOSAD2019332, analizując wyniki tej pracy dyplomowej można zauważyć skutki postępującej antropopresji, która powoduje przede wszystkim przekształcenia terenów rolnych i obszarów leśnych na rzecz dynamicznie powiększających się terenów antropogenicznych.
+Najważniejszym elementem odróżniającym tą pracę od wcześniej wspomnianych artykułów jest rozszerzenie przestrzennej analizy zmian pokrycia terenu o ilościową ocenę wielkości zmian struktur przestrzennych.
+Zastosowanie wyżej wspomnianych metod pozwoliło na wykonanie analizy trendów zmian obszarów najbardziej przekształconych w latach 1990-2018.

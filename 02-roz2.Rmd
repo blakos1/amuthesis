@@ -11,16 +11,13 @@ Analiza w skali europejskiej przedstawiona została w pracy @Mucher_EU.
 W tym artykule opracowana została metoda umożliwiająca uzyskanie ogólnoeuropejskiej bazy danych pokrycia terenu o rozdzielczości przestrzennej 1 km, którą można w łatwy sposób aktualizować za pomocą danych satelitarnych.
 Jednakże sam autor zwrócił uwagę na ograniczenia w monitorowaniu zmian przestrzennych wynikające z niewielkiej rozdzielczości przestrzennej użytych danych, co było powodem wykorzystania dodatkowych technik wykrywania zmian.
 
+<!-- Zmiany użytkowania ziemi w Polsce w drugiej połowie XX wieku, ANDRZEJ CIOŁKOSZ -->
+Analiza zmian pokrycia terenu w Polsce w drugiej połowie XX wieku wykonana została w artykule @Ciolkosz_Polawski_2006.
+Autorzy zwrócili uwagę na widoczny regionalizm zmian pokrycia terenu, czyli występowanie regionów o niewielkiej ilości zmian, jak i obszarów o intensywnych zmianach i znacznym zasięgu, co także zostało zaznaczone w wynikach tej pracy dyplomowej.
+
 <!-- Zmiany pokrycia terenu w Polsce w latach 1990-2012 na podstawie danych CORINE Land Cover, Mierzwiak-->
-Dla obszaru Polski, analiza zmian pokrycia terenu została wykonana w publikacji autorstwa @Mierzwiak_Całka_2019.
-Analiza ta została przeprowadzona dla lat 1990-2012 i także została oparta na danych pochodzących z programu CORINE.
+W publikacji autorstwa @Mierzwiak_Całka_2019 została przeprowadzona analiza zmian pokrycia terenu dla lat 1990-2012 i także została oparta na danych pochodzących z programu CORINE.
 W przeciwieństwie do badań @Mierzwiak_Całka_2019, w tej pracy dyplomowej nie zostały wykorzystane bazy danych zmian pokrycia terenu między produktami programu CORINE.
 Zamiast tego, użyto produktów tego programu w postaci rastrowych map pokrycia terenu CORINE Land Cover dla lat 1990 i 2018.
 Statystyki dotyczące zmian pokrycia terenu między analizowanymi rastrami zostały obliczone za pomocą podstawowej algebry rastrów.
 Co więcej, podejście do analizy zmian przestrzennych zostało rozszerzone o analizę struktur przestrzennych na podstawie metod przedstawionych w pracy @NOWOSAD2019332 oraz @nowosad_motif.
-
-**znaleźć jeszcze jedną analizę dla Polski**
-
-<!-- Zmiany użytkowania ziemi w Polsce w drugiej połowie XX wieku, ANDRZEJ CIOŁKOSZ -->
-W artykule @Ciolkosz_Polawski_2006 wykonano analizę zmian pokrycia terenu dla obszaru Polski dla lat 
-
