@@ -1,9 +1,23 @@
 # Podsumowanie {#podsumowanie}
 
-<!--
-Podsumowanie pracy jest w pewnym sensie znacznie rozbudowanym abstraktem. 
-Należy wyliczyć i opisać osiągnięcia uzyskane w pracy dyplomowej.
-Tutaj jednak (w przeciwieństwie do np. rozdziału \@ref(wprowadzenie)) należy przechodzić od szczegółu do ogółu - co zostało stworzone/określone, jak zostało to zrobione, jakie ma to konsekwencje, itd.
+Celem niniejszej pracy dyplomowej było wykonanie analizy zmian pokrycia terenu w Polsce w latach 1990-2018.
+W tym celu wykorzystane zostały dane przestrzenne o pokryciu terenu CORINE Land Cover dla analizowanych lat.
+Zmiany ilościowe pokrycia terenu na poziomie całego kraju zostały obliczone w oparciu o algebrę rastrów.
+Z obliczeń wynika, że w latach 1990-2018 zmiany objęły aż 7,9% całkowitej powierzchni terytorium Polski, jednakże ze względu na ograniczenia programu CORINE związane z aktualizacją zmian o określonej wielkości, rzeczywiste zmiany pokrycia terenu były prawdopodobnie większe.
+Ogólne trendy wynikające z danych CLC dla analizowanego okresu to przede wszystkim dynamiczny przyrost powierzchni terenów antropogenicznych, głównie powstających na obszarach sklasyfikowanych wcześniej jako tereny rolne, obustronne przekształcenia lasów i terenów krzewiastych, bardzo duży wzrost powierzchni terenów krzewiastych oraz znaczne ubytki powierzchni terenów z rzadszą roślinnością.
 
-Ten rozdział powinien też zawierać opis kwestii, których nie udało się rozwiązać w pracy dyplomowej (i dlaczego się nie udało) oraz pomysły na przyszłe ulepszenie uzyskanych wyników lub dalsze badania.
--->
+Dodatkowym celem było znalezienie i graficzna reprezentacja najbardziej zmienionych obszarów w przeciągu ostatnich 28 lat.
+Cel ten udało się osiągnąć poprzez rozszerzenie analizy o metody wywodzące się z dziedziny ekologii krajobrazów. Wykorzystana metoda polegała na analizie struktur przestrzennych na podstawie obliczeń sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
+Pozwoliło to na przeprowadzenie ilościowej oceny zmian pokrycia terenu dla dwóch rodzajów jednostek przestrzennych.
+
+Pierwszy etap obejmował analizę zmian wewnątrz regularnych obszarów 10 na 10 km.
+W wyniku stwierdzono, że na większości obszarów pokrycie terenu w latach 1990-2018 zmieniło się w bardzo niewielkim stopniu.
+Jednakże zwrócono uwagę także na obecność obszarów, gdzie zmiany pokrycia terenu w tych latach można określić jako ekstremalne.
+Największe zmiany na tych obszarach związane były ze skutkami ekstremalnych zjawisk naturalnych, a kierunki zmian na tych obszarach stanowiły głównie przemiany obszarów leśnych w tereny krzewiaste oraz rozwój terenów antropogenicznych.
+
+Następnie przeanalizowane zostały zmiany na poziomie powiatowym.
+Wskazano duże podobieństwo między wynikami dla regularnych obszarów i powiatów.
+Jednakże podział na powiaty uwydatnia wielkość zmian, które zaszły na terenie miast na prawach powiatu, na znacznej części, których zaszły duże zmiany pokrycia terenu.
+Najbardziej zmienione powiaty w latach 1990-2018 to kolejno: powiat Bielsko-Biała, powiat Mysłowice, powiat Legnica, powiat Elbląg, powiat Piotrków Trybunalski oraz powiat ostrowiecki.
+Najważniejszym kierunkiem zmian pokrycia terenu wśród tych obszarów, były przekształcenia terenów rolnych w tereny antropogeniczne.
+Zauważono także, że większość z terenów objętych zmianą położone było w pobliżu terenów antropogenicznych istniejących już wcześniej, co może wskazywać na zachodzący proces suburbanizacji.

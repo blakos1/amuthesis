@@ -5,17 +5,14 @@ Pokrycie terenu stanowi wszelkie obiekty znajdujące się na powierzchni Ziemi z
 Pokrycie terenu dla dużych obszarów zazwyczaj opisywane jest za pomocą danych o pokryciu terenu.
 
 <!-- 2.Co to monitorowanie tego pokrycia i po co? -->
-**DODAĆ ODNIESIENIA DO LITERATURY**
-Monitorowanie pokrycia terenu obejmuje wszelkie procesy, których celem jest gromadzenie informacji o stanie środowiska geograficznego.
-Informacje pozyskane w wyniku tych procesów, pomagają określić zmiany zachodzące w otaczającym nas świecie.
-Zmiany pokrycia terenu są zazwyczaj powolnym procesem, jednakże mają bezpośredni wpływ na zmiany klimatu i warunki środowiskowe.
-Zmiany te są także ściśle powiązane z działalnością człowieka.
-Znaczna część zmian pokrycia terenu będących skutkiem antropopresji ma charakter negatywny i jest związana z rozwojem środowisk antropogenicznych.
-Zmiany te prowadzą do stopniowej utraty bioróżnorodności ekosystemów.
-Działalność człowieka może mieć także pozytywny wpływ na stan środowiska naturalnego, np. zakładanie obszarowych form ochrony przyrody.
+
+W ostatnich latach, zmiany wywołane przez człowieka znacząco wpłynęły na otaczające nas środowisko [@Radwan_2021; @NOWOSAD2019332; @Mucher_EU].
+Zmiany pokrycia terenu mają bezpośredni wpływ na zmiany klimatu i warunki środowiskowe.
+Antropogeniczne zmiany pokrycia terenu stanowią szczególne zagrożenie dla prawidłowego funkcjonowania ekosystemów [@Verburg_2011].
+Znaczna ich część może mieć negatywny wpływ zarówno na środowisko [@Tai_2014], jak i działalność człowieka [@Feddema_2006].
 Dlatego też monitorowanie zmian pokrycia terenu, a także ocena dynamiki tych zmian ma pierwszorzędne znaczenie dla skutecznego planowania i zarządzania zasobami.
 
-Jednym z programów, których celem jest monitorowanie pokrycia terenu, jest program CORINE przyjęty w 1985 roku przez Komisję Europejską.
+Jednym z programów, których celem jest monitorowanie pokrycia terenu, jest program CORINE przyjęty w 1985 roku przez Komisję Wspólnot Europejskich.
 Program ten oparty jest o analizy licznych obrazów satelitarnych, które następnie są interpretowane do uproszczonej postaci danych podzielonych na ustalone kategorie pokrycia terenu.
 Do wyników programu CORINE należą, między innymi, zbiory danych o pokryciu terenu CORINE Land Cover (CLC), obejmujące obszarem większość państw europejskich.
 Dane te są szczególnie popularne w celach analiz zmian pokrycia terenu [@Mierzwiak_Całka_2019; @Ciolkosz_Polawski_2006].
@@ -27,9 +24,6 @@ Inny sposób, oparty o metody wywodzące się z dziedziny ekologii krajobrazów,
 Analizy można wykonać dla obszarów regularnych lub nieregularnych.
 Podstawowa metoda podziału na obszary regularne zakłada podzielenie dużego regionu na mniejsze obszary o kształcie kwadratu.
 Innym podejściem jest podział na obszary nieregularne, które mogą być wynikiem wcześniejszych badań (np. ekoregiony) lub reprezentować pewne istniejące granice, takie jak podziały administracyjne [@nowosad_motif].
-
-<!-- Sygnatury przestrzenne można obliczyć dla obszarów regularnych lub nieregularnych. Podstawowym przykładem używania zwykłych obszarów jest podzielenie dużego regionu na kilka mniejszych obszarów o rozmiarze kwadratu -->
-<!-- Innym podejściem jest wykorzystanie regionów nieregularnych, które mogą być wynikiem wcześniejszych badań (np. ekoregiony, regionalizacje klimatyczne) lub reprezentują pewne istniejące granice, takie jak powiaty, stany lub kraje.  -->
 
 <!-- Coś o sygnaturach przestrzennych -->
 Jednym z rodzajów wspomnianych powyżej analiz są analizy oparte o sygnatury przestrzenne.

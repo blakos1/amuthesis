@@ -5,18 +5,20 @@
 Jednym z celów tej pracy było sporządzenie map pokrycia terenu Polski, opartych o dane CORINE Land Cover dla lat 1990 i 2018 zreklasyfikowane do 7 kategorii pokrycia terenu, aby umożliwić ogólną ocenę stanu pokrycia terenu dla tych lat.
 Mapy te zostały przedstawione poniżej (rycina \@ref(fig:rycina1)).
 <!-- Pomimo zastosowania wyłącznie 7 kategorii, analiza zmian pokrycia terenu w skali całego kraju na podstawie wizualnego porównania tych map byłaby prawdopodobnie równie trudna, co błędna. <- do przepisania -->
-Dodatkowo, udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinie \@ref(fig:rycina4).
-W celu oceny zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście statystyczne.
+Udział poszczególnych kategorii pokrycia terenu w całkowitej powierzchni Polski przedstawiony został na rycinie \@ref(fig:rycina4).
+Na podstawie tej ryciny można sformułować pierwsze spostrzeżenia odnośnie trendów zmian pokrycia terenu w skali całego kraju.
+W latach 1990-2018 nastąpił znaczny spadek udziału terenów rolnych w całkowitej powierzchni kraju.
+Wzrost udziału nastąpił natomiast wśród obszarów leśnych, terenów antropogenicznych oraz terenów krzewiastych.
+W celu dalszej oceny zmian w skali krajowej, wykonana została analiza ilościowa zmian pokrycia terenu, oparta o podejście statystyczne.
 
 ```{r rycina1, echo=FALSE, fig.cap="Corine Land Cover 1990 i 2018 po reklasyfikacji", out.width=400}
 knitr::include_graphics("figures/clc_stacked.png")
 ```
 
-```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla lat 1990 i 2018", out.width=400}
+```{r rycina4, echo=FALSE, fig.cap="Procentowy udział form pokrycia terenu dla lat 1990 i 2018", out.width=350}
 knitr::include_graphics("figures/lcpch90.png")
 knitr::include_graphics("figures/lcpch18.png")
 ```
-
 
 ### Analiza ilościowa zmian pokrycia terenu
 
@@ -33,7 +35,7 @@ Całkowita powierzchnia tych terenów wzrosła wyłącznie o 2,3%.
 Niewielkie powiększenie powierzchni lasów (5.19%) spowodowane było wysokimi ubytkami powierzchni w stosunku do ich przyrostów.
 Ponad 3% powierzchni obszarów leśnych, w roku 2018 zmieniło kategorię pokrycia terenu.
 
-```{r tabela2, echo=FALSE}
+```{r tabela2, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
 library(kableExtra)
 
@@ -77,7 +79,6 @@ Oznacza to, że np. kolumna tabeli oznaczona kategorią "1" informuje nas o licz
 Przecięcia wierszy i kolumn oznaczonych tymi samymi kategoriami informują o liczbie komórek rastra, które w analizowanych latach się nie zmieniły.
 Numeracja kategorii w tabeli odpowiada kolejności kategorii przedstawionej w podrozdziale \@ref(reklasyfikacja).
 
-**dodać kolumne i rząd z latami**
 ```{r tabela3, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
 library(kableExtra)
@@ -86,40 +87,30 @@ library(dplyr)
 options(knitr.kable.NA = '')
 
 options(scipen=999)
-cont_table = read.csv("data/cont_table_export.csv", header = FALSE)
-# cont_table[2:8, 2:8] = cont_table[2:8, 2:8] / 100
+cont_table = read.csv("data/cont_table_export.csv", header = TRUE)
 
-# cont_table = cont_table %>% 
-#   mutate_if(is.numeric, format, nsmall = 2)
+a = data.frame("a" = c(rep("1990", 7)))
+cont_table = cbind(a, cont_table)
 
-cont_table[1,2:8] = as.character(as.integer(cont_table[1,2:8]))
-
-
-rownames(cont_table) = NULL
-colnames(cont_table) = NULL
-
-cont_table[1,1] = NA
+colnames(cont_table) = c(" ", " ", as.character(1:7))
 
 kbl(cont_table,
     booktabs = TRUE,
-    format = "latex",
-    linesep="",
-    caption = "Macierz zmian pokrycia terenu w latach 1990-2018 [ha]") %>%
-  kable_classic(full_width = F) %>%
-  column_spec(1, bold = T, border_right = TRUE) %>%
-  row_spec(1, bold = T, align = "r", hline_after = T) %>%
-  row_spec(2:8, align = "r")
+    linesep = "",
+    caption = "Macierz zmian pokrycia terenu w latach 1990-2018 [ha]") %>% 
+  kable_classic(full_width = F) %>% 
+  add_header_above(c("","","2018" = 7)) %>% 
+  collapse_rows(1)
 
 ```
-
-Na podstawie tabeli \@ref(tab:tabela3) opracowana została rycina \@ref(fig:rycina8), przedstawiająca najważniejsze trendy zmian pokrycia terenu w sposób graficzny.
-Kategorie pokrycia terenu zostały podzielone na osobne wykresy, reprezentujące przyrosty kategorii w 2018 roku.
-Kolory wewnątrz wykresów informują o tym, jaką część przyrostów powierzchni danej kategorii stanowią komórki, które w roku 1990 należały do pozostałych kategorii.
 
 ```{r rycina8, echo=FALSE, fig.cap="Udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
 knitr::include_graphics("figures/treemap_faceted.png")
 ```
 
+Na podstawie tabeli \@ref(tab:tabela3) opracowana została rycina \@ref(fig:rycina8), przedstawiająca najważniejsze trendy zmian pokrycia terenu w sposób graficzny.
+Kategorie pokrycia terenu zostały podzielone na osobne wykresy, reprezentujące przyrosty kategorii w 2018 roku.
+Kolory wewnątrz wykresów informują o tym, jaką część przyrostów powierzchni danej kategorii stanowią komórki, które w roku 1990 należały do pozostałych kategorii.
 Analizując rycinę \@ref(fig:rycina8) można zauważyć pewne tendencje wśród zmian pokrycia terenu.
 Najważniejsze trendy zmian pokrycia terenu, stanowiące największe straty pokrycia terenu w kategorii pierwotnej:
 
@@ -140,9 +131,13 @@ Największe zmiany o charakterze rozproszonym zauważyć można w południowej c
 Dużą ilością rozproszonych zmian pokrycia terenu cechują się także województwo mazowieckie, województwo świętokrzyskie, centralna część województwa podkarpackiego oraz zachodnia część województwa dolnośląskiego.
 Znaczna większość zmian na tych obszarach stanowi zmianę z terenów rolnych w tereny antropogeniczne.
 
+```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji dla lat 1990-2018", out.width=400}
+knitr::include_graphics("figures/lc_bin2.png")
+```
+
 Obszary, na których zaszły znaczne zmiany pokrycia terenu o charakterze skoncentrowanym wymienione zostały poniżej, wraz z wyjaśnieniem, w jakim miejscu znajdują się te obszary, i z jakimi zmianami kategorii są związane.
 Duże obszary zmienione w wyniku działalności człowieka:
-**dodać źródła?**
+<!-- **dodać źródła?** -->
 
 1. Kopalnia Węgla Brunatnego Bełchatów i zwałowisko zewnętrzne Góra Kamieńska, będąca jego skutkiem:
 lasy i tereny rolne zostały przekształcone w tereny antropogeniczne.
@@ -168,10 +163,6 @@ przemiana terenów krzewiastych w tereny leśne, skutki trąb powietrznych z 200
 10. Kotlina Raciborska, nadleśnictwo Rudy Raciborskie:
 pożar lasu w nadleśnictwie Rudy Raciborskie z 1992 roku, który strawił 9062 ha lasów, następnie w roku 2017 zniszczenia lasów spowodowane trąbą powietrzną.
 
-```{r rycina3, echo=FALSE, fig.cap="Binarna mapa zmian klasyfikacji dla lat 1990-2018", out.width=400}
-knitr::include_graphics("figures/lc_bin2.png")
-```
-
 <!--
 ```{r rycina6, echo=FALSE, fig.cap="Procentowy udział poszczególnych kategorii w zmianie pokrycia terenu", out.width=400}
 knitr::include_graphics("figures/stacked.png")
@@ -195,14 +186,14 @@ Na podstawie obliczonych wartości tego parametru, wyodrębnione zostało 6 najb
 
 ### Analiza zmian regularnych obszarów 10 na 10 km
 
+```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
+knitr::include_graphics("figures/map_grid.png")
+```
+
 Wartości obliczonych odległości Jensena-Shannona dla kwadratów 10 na 10 km przedstawione zostały na rycinie \@ref(fig:rycina9).
 Podobnie jak na rycinie \@ref(fig:rycina3), duże ilości zmian struktury przestrzennej widoczne są głównie w południowej części kraju. 
 Największe zmiany widoczne są na obszarze województw: świętokrzyskiego, małopolskiego, śląskiego oraz dolnośląskiego.
 Najmniejsze zmiany zauważyć można na obszarze morza terytorialnego oraz na południu Polski na terenie Płaskowyżu Głubczyckiego.
-
-```{r rycina9, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla oczek siatki o wymiarach 10x10km", out.width=400}
-knitr::include_graphics("figures/map_grid.png")
-```
 
 <!--
 ```{r rycina12, echo=FALSE, fig.cap="Obszar z największymi zmianami w siatce 10x10km", out.width=400}
@@ -244,7 +235,9 @@ Obszary o największych zmianach przedstawione na rycinie \@ref(fig:rycina15) st
 
 Wśród powiatów (Rycina \@ref(fig:rycina10)), najwyższe wartości odległości Jensena-Shannona zauważalne są w tych samych lokalizacjach, co dla regularnych obszarów 10 na 10 km.
 Poza tymi obszarami wysokie wartości parametru osiągnęła także duża część miast na prawach powiatu.
-Najwyższa wartości odległości Jensena-Shannona wśród powiatów jest także znacznie niższa w porównaniu z najwyższą wartością wśród regularnych obszarów 10 na 10 km, co wskazuje na punktową charakterystykę największych zmian pokrycia terenu.
+Należy jednak zauważyć, że najwyższe wartości odległości Jensena-Shannona wśród powiatów są znacznie niższe w porównaniu z najwyższymi wartościami wśród regularnych obszarów 10 na 10 km.
+Spowodowane jest to mniejszym udziałem ekstremalnych zmian pokrycia terenu w całkowitej powierzchni powiatów.
+
 ```{r rycina10, echo=FALSE, fig.cap="Odległość Jensena-Shannona obliczona dla powiatów", out.width=400}
 knitr::include_graphics("figures/map_dist.png")
 ```

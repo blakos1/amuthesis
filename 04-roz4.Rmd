@@ -10,15 +10,7 @@ Rycina \@ref(fig:rycina41) przedstawia przykład wpływu reklasyfikacji na liczb
 Aby uniknąć powyższej sytuacji, klasy zostały zgrupowane do oryginalnego podziału dla pierwszego poziomu CLC, z wyjątkiem lasów i ekosystemów naturalnych, gdzie zastosowano podział dla poziomu drugiego.
 
 W wyniku reklasyfikacji liczba klas pokrycia terenu została zmniejszona z 33 klas poziomu trzeciego występujących na obszarze Polski do 7.
-Otrzymano następujące kategorie pokrycia terenu:
-
-1. tereny antropogeniczne,
-2. tereny rolne,
-3. lasy,
-4. tereny krzewiaste,
-5. tereny z rzadszą roślinnością,
-6. obszary podmokłe,
-7. obszary wodne.
+Otrzymano następujące kategorie pokrycia terenu: 1. tereny antropogeniczne, 2. tereny rolne, 3. lasy, 4. tereny krzewiaste, 5. tereny z rzadszą roślinnością, 6. obszary podmokłe, 7. obszary wodne.
 
 ```{r rycina41, echo=FALSE, fig.cap="Porównanie danych CLC dla obszaru miasta Poznań przed (górne panele) i po reklasyfikacji (dolne panele)", out.width=400}
 knitr::include_graphics("figures/clc_diff2.png")
@@ -94,10 +86,7 @@ library(motif)
 library(stars)
 
 land_cover = read_stars("data/clc_poland.tif")
-coma = lsp_signature(land_cover,
-                     type = "coma",
-                     window = 100)
-
+coma = lsp_signature(land_cover, type = "coma", window = 100)
 coma
 ```
 
