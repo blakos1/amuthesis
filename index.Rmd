@@ -1,6 +1,6 @@
 ---
 title: "Zmiany pokrycia terenu dla obszaru Polski: 1990-2018"
-titleeng: "Analysis of land cover changes in Poland between 1990 and 2018"
+titleeng: "Land cover changes for the territory of Poland: 1990-2018"
 degreetype: "Praca inżynierska"
 author: "Błażej Kościański"
 major: "Geoinformacja"

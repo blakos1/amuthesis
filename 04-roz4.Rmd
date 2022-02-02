@@ -97,7 +97,7 @@ W wyniku obliczeń otrzymany został obiekt klasy *lsp* zawierający trzy kolumn
 - signature - sygnatura obliczona dla danego obszaru.
 
 
-Sygnatura przestrzenna to opis struktur przestrzennych analizowanego obszaru, zapisany w sposób numeryczny [@Jasiewicz_GeoPAT].
+Sygnatura przestrzenna to opis struktur przestrzennych analizowanego obszaru zapisany w sposób numeryczny [@Jasiewicz_GeoPAT].
 Taki sposób zapisu danych o pokryciu terenu umożliwia ilościowe porównania struktur przestrzennych dowolnych obszarów.
 W pakiecie motif, sygnatury można obejrzeć poprzez wydzielenie ich z kolumny *signature*:
 
@@ -109,14 +109,13 @@ coma$signature[[24]]
 ## Przygotowanie danych do analizy {#analiza}
 <!-- W tej części można dodać jakiś diagram pokazujący kolejne kroki analizy. Trzeba też dokładniej te kroki opisać (proszę postawić się w miejscu osoby, która chciałaby zrobić to samo co Pan, ale dla innego kraju) -->
 Poszczególne kroki wykonane w celu pozyskania wyników umożliwiających dalszą analizę struktur przestrzennych na wyodrębnionych obszarach zostały przedstawione na rycinie \@ref(fig:rycina42).
-Podany przykład jest wyłącznie uproszczeniem czynności wykonanych w rzeczywistości, ponieważ w sekcji "Analiza zmian pokrycia terenu" zawarty został wyłącznie proces pozyskania danych wyjściowych do analizy struktur przestrzennych na poziomie powiatów.
 
 ```{r rycina42, echo=FALSE, fig.cap="Schemat procesu przygotowania danych do analizy", out.width=400}
 knitr::include_graphics("figures/workflow.pdf")
 ```
 
 <!-- przycięcie danych -->
-Wszystkie dane wykorzystane do przygotowania analizy zostały szczegółowo omówione w rozdziale \@ref(materialy).
+Dane wykorzystane do przygotowania analizy zostały szczegółowo omówione w rozdziale \@ref(materialy).
 Ze względu na to, że pobrane dane rastrowe CLC obejmują obszar większy niż obszar analizowany w tej pracy, pierwszym krokiem przygotowania danych było przycięcie danych rastrowych do granic Polski.
 
 <!-- reklasyfikacja -->

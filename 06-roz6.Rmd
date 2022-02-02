@@ -12,12 +12,15 @@ Pozwoliło to na przeprowadzenie ilościowej oceny zmian pokrycia terenu dla dw�
 
 Pierwszy etap obejmował analizę zmian wewnątrz regularnych obszarów 10 na 10 km.
 W wyniku stwierdzono, że na większości obszarów pokrycie terenu w latach 1990-2018 zmieniło się w bardzo niewielkim stopniu.
-Jednakże zwrócono uwagę także na obecność obszarów, gdzie zmiany pokrycia terenu w tych latach można określić jako ekstremalne.
-Największe zmiany na tych obszarach związane były ze skutkami ekstremalnych zjawisk naturalnych, a kierunki zmian na tych obszarach stanowiły głównie przemiany obszarów leśnych w tereny krzewiaste oraz rozwój terenów antropogenicznych.
+Jednakże zwrócono uwagę także na obecność obszarów, gdzie zmiany pokrycia terenu w tych latach można określić jako bardzo znaczne.
+Kierunki największych zmian na tych obszarach stanowiły głównie przemiany obszarów leśnych w tereny krzewiaste oraz rozwój terenów antropogenicznych.
 
 Następnie przeanalizowane zostały zmiany na poziomie powiatowym.
-Wskazano duże podobieństwo między wynikami dla regularnych obszarów i powiatów.
+Wskazano na duże podobieństwo między wynikami dla regularnych obszarów i powiatów.
 Jednakże podział na powiaty uwydatnia wielkość zmian, które zaszły na terenie miast na prawach powiatu, na znacznej części, których zaszły duże zmiany pokrycia terenu.
 Najbardziej zmienione powiaty w latach 1990-2018 to kolejno: powiat Bielsko-Biała, powiat Mysłowice, powiat Legnica, powiat Elbląg, powiat Piotrków Trybunalski oraz powiat ostrowiecki.
 Najważniejszym kierunkiem zmian pokrycia terenu wśród tych obszarów, były przekształcenia terenów rolnych w tereny antropogeniczne.
 Zauważono także, że większość z terenów objętych zmianą położone było w pobliżu terenów antropogenicznych istniejących już wcześniej, co może wskazywać na zachodzący proces suburbanizacji.
+
+Wykonując w przyszłości podobną analizę zmian pokrycia terenu kwestią wartą udoskonalenia jest proces określenia trendów zmian dla najbardziej zmienionych obszarów.
+Stworzenie metody pozwalającej na określenie największych zmian kategorii na tych obszarach w sposób niewymagający ich wizualnej interpretacji przez osobę wykonującą analizę pozwoliłoby na uwzględnienie w analizie znacznie większej ilości wyodrębnionych jednostek przestrzennych.

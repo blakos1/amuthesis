@@ -5,11 +5,12 @@ Ocena dynamiki zmian pokrycia terenu ma ważne znaczenie dla skutecznego planowa
 <!-- W wyniku programów monitorowania zmian pokrycia terenu powstają liczne zbiory danych umożliwiające wykonanie takich analiz nawet w skali globalnej. -->
 <!-- Większość analiz zmian pokrycia terenu wykonanych w przeszłości, skupiała się wyłącznie na aspektach ilości i lokalizacji zachodzących zmian. -->
 <!-- (2) 1 zdanie opisujące cel pracy -->
-Celem tej pracy było określenie <!--zmian ilościowych oraz charakteru przestrzennego głównych -->zmian pokrycia terenu na obszarze Polski w latach 1990-2018 dodatkowo rozszerzając istniejące metody analiz przestrzennych o analizy struktur przestrzennych.
+Celem tej pracy było określenie <!--zmian ilościowych oraz charakteru przestrzennego głównych -->zmian pokrycia terenu na obszarze Polski w latach 1990-2018 dodatkowo rozszerzając istniejące podejścia oceny zmian o analizy struktur przestrzennych.
 <!-- (3) 1-3 zdania przedstawiające użyte materiały (dane) i metody (techniki, narzędzia), -->
 Do pracy wykorzystane zostały zbiory danych przestrzennych o pokryciu terenu CORINE Land Cover (CLC).
 Zmiany ilościowe zostały obliczone z użyciem algebry rastrów.
 Analiza przestrzennego charakteru zmian pokrycia terenu wykonana została w oparciu o metody wykorzystujące obliczenia sygnatur przestrzennych dla mniejszych obszarów wydzielonych z obszaru badań.
+Zastosowano podział administracyjny Polski na poziomie powiatów oraz podział na regularne obszary o wymiarach 10 na 10 km.
 <!-- (4) 1-3 zdania obrazujące główne wyniki pracy -->
 Wynikiem pracy są informacje o najważniejszych kierunkach zmian pokrycia terenu na obszarze Polski w latach 1990-2018.
 
@@ -23,6 +24,7 @@ The aim of this study was to determine the changes in land cover in Poland in th
 The analysis is based on CORINE Land Cover (CLC) spatial data sets.
 Quantitative changes were calculated using raster algebra.
 The spatial analysis of land cover changes was performed using methods that utilize calculation of spatial signatures for regions made by dividing the study area into smaller fragments.
+The administrative division of Poland at the poviat level was used, as well as the division into regular areas of 10 by 10 km.
 The result of the work is information on the most important directions of land cover changes in Poland in 1990-2018.
 
 Keywords: spatial patterns, spatial signatures, land cover, CORINE Land Cover, CLC
